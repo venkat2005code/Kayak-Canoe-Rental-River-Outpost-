@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Riverside</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header dash-header">
+        <div class="dash-header-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-water"></i>
+                Riverside
+            </a>
+            
+            <div class="header-actions">
+                <button id="theme-toggle-btn" class="icon-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="rtl-toggle-btn" class="icon-btn" aria-label="Toggle LTR/RTL">
+                    <i class="fa-solid fa-language"></i>
+                </button>
+                <button class="menu-btn" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile sidebar scrim overlay -->
+    <div class="dash-sidebar-scrim" id="dash-sidebar-scrim"></div>
+
+    <div class="dash-wrapper">
+        <!-- Sidebar -->
+        <aside class="dash-sidebar" id="dash-sidebar">
+            <nav class="dash-nav">
+                <ul class="dash-nav-list">
+                    <li class="dash-nav-item">
+                        <a href="#overview" class="dash-nav-link active">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span>Overview</span>
+                        </a>
+                    </li>
+                    <li class="dash-nav-item">
+                        <a href="#bookings" class="dash-nav-link">
+                            <i class="fa-solid fa-book"></i>
+                            <span>Total Bookings</span>
+                        </a>
+                    </li>
+                    <li class="dash-nav-item">
+                        <a href="#inventory" class="dash-nav-link">
+                            <i class="fa-solid fa-anchor"></i>
+                            <span>Equipment Inventory</span>
+                        </a>
+                    </li>
+                    <li class="dash-nav-item">
+                        <a href="#customers" class="dash-nav-link">
+                            <i class="fa-solid fa-users-gear"></i>
+                            <span>Customer Mgmt</span>
+                        </a>
+                    </li>
+                    <li class="dash-nav-item">
+                        <a href="#operations" class="dash-nav-link">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>Operations & Safety</span>
+                        </a>
+                    </li>
+                    <li class="dash-nav-item">
+                        <a href="#analytics" class="dash-nav-link">
+                            <i class="fa-solid fa-chart-pie"></i>
+                            <span>Analytics & Reports</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dash-main">
+            <!-- Content -->
+            <div class="dash-content">
+                
+                <!-- Section: Overview -->
+                <section id="overview" class="dash-section" style="margin-bottom: 4rem; padding-top: 2rem;">
+                    <div class="dash-page-title">
+                        <h1>Command Center</h1>
+                        <p>Overview of today's operations, fleet status, and revenue analytics.</p>
+                    </div>
+
+                    <div class="dash-kpi-grid">
+                        <div class="dash-card">
+                            <div class="kpi-header">
+                                <span>Today's Revenue</span>
+                                <div class="kpi-icon green"><i class="fa-solid fa-dollar-sign"></i></div>
+                            </div>
+                            <div class="kpi-value">$2,450</div>
+                            <div class="kpi-trend trend-up">
+                                <i class="fa-solid fa-arrow-up"></i>
+                                <span>12% vs yesterday</span>
+                            </div>
+                        </div>
+                        <div class="dash-card">
+                            <div class="kpi-header">
+                                <span>Active Rentals</span>
+                                <div class="kpi-icon blue"><i class="fa-solid fa-ship"></i></div>
+                            </div>
+                            <div class="kpi-value">18</div>
+                            <div class="kpi-trend">
+                                <span>Out of 45 total fleet</span>
+                            </div>
+                        </div>
+                        <div class="dash-card">
+                            <div class="kpi-header">
+                                <span>Pending Waivers</span>
+                                <div class="kpi-icon orange"><i class="fa-solid fa-file-contract"></i></div>
+                            </div>
+                            <div class="kpi-value">5</div>
+                            <div class="kpi-trend trend-up">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>For upcoming launches</span>
+                            </div>
+                        </div>
+                        <div class="dash-card">
+                            <div class="kpi-header">
+                                <span>New Customers</span>
+                                <div class="kpi-icon"><i class="fa-solid fa-user-plus"></i></div>
+                            </div>
+                            <div class="kpi-value">12</div>
+                            <div class="kpi-trend trend-up">
+                                <i class="fa-solid fa-arrow-up"></i>
+                                <span>Today</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Bookings -->
+                <section id="bookings" class="dash-section" style="margin-bottom: 4rem; padding-top: 2rem;">
+                    <div class="dash-page-title">
+                        <h2>Total Bookings</h2>
+                        <p>Manage and review the daily schedule and booking requests.</p>
+                    </div>
+                    <div class="dash-card">
+                        <div class="dash-card-header" style="flex-wrap: wrap; gap: 1rem;">
+                            <span class="dash-card-title">Live Bookings Queue</span>
+                            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <input type="text" placeholder="Search booking ref or name..." style="padding: 0.4rem 0.8rem; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit;">
+                                <select style="padding: 0.4rem 0.8rem; border: 1px solid #cbd5e1; border-radius: 6px; background: var(--bg-color); font-family: inherit;">
+                                    <option>All Statuses</option>
+                                    <option>Pending Waiver</option>
+                                    <option>Ready to Launch</option>
+                                    <option>On Water</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="dash-table-wrapper">
+                            <table class="dash-table">
+                                <thead>
+                                    <tr>
+                                        <th>Ref ID</th>
+                                        <th>Customer</th>
+                                        <th>Equipment</th>
+                                        <th>Time</th>
+                                        <th>Waiver Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#BK-9041</td>
+                                        <td>John Doe</td>
+                                        <td>Single Kayak</td>
+                                        <td>10:00 AM</td>
+                                        <td><span class="dash-badge badge-success">Signed</span></td>
+                                        <td><button class="btn btn-primary" style="padding:0.25rem 0.5rem; font-size:0.8rem;">Launch</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#BK-9042</td>
+                                        <td>Sarah Smith (Group of 4)</td>
+                                        <td>2x Tandem Canoe</td>
+                                        <td>11:30 AM</td>
+                                        <td><span class="dash-badge badge-warning">Missing (2)</span></td>
+                                        <td><button class="btn btn-secondary" style="padding:0.25rem 0.5rem; font-size:0.8rem;">Send Reminder</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#BK-9043</td>
+                                        <td>Mike Johnson</td>
+                                        <td>Stand-up Paddleboard</td>
+                                        <td>01:00 PM</td>
+                                        <td><span class="dash-badge badge-success">Signed</span></td>
+                                        <td><button class="btn btn-primary" style="padding:0.25rem 0.5rem; font-size:0.8rem;">Launch</button></td>
+                                    </tr>
+                                    <tr style="opacity: 0.7;">
+                                        <td>#BK-9039</td>
+                                        <td>Emily Davis</td>
+                                        <td>Single Kayak</td>
+                                        <td>08:00 AM</td>
+                                        <td><span class="dash-badge badge-success">Signed</span></td>
+                                        <td><span style="font-size: 0.85rem; font-weight: 500; color: var(--primary-color);">On Water</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Inventory -->
+                <section id="inventory" class="dash-section" style="margin-bottom: 4rem; padding-top: 2rem;">
+                    <div class="dash-page-title">
+                        <h2>Equipment Inventory</h2>
+                        <p>Track the status of your fleet and equipment.</p>
+                    </div>
+                    <div class="dash-bento-grid" style="margin-bottom: 2rem;">
+                        <div class="dash-card dash-col-4">
+                            <div class="kpi-header"><span>Single Kayaks</span></div>
+                            <div class="kpi-value">12 / 20</div>
+                            <p style="color:var(--text-light); font-size:0.9rem; margin-top: 0.5rem;">Available right now</p>
+                            <div style="height: 6px; background: #cbd5e1; border-radius: 3px; overflow: hidden; margin-top: 0.8rem;">
+                                <div style="height: 100%; width: 60%; background: var(--primary-color);"></div>
+                            </div>
+                        </div>
+                        <div class="dash-card dash-col-4">
+                            <div class="kpi-header"><span>Tandem Canoes</span></div>
+                            <div class="kpi-value">5 / 15</div>
+                            <p style="color:var(--text-light); font-size:0.9rem; margin-top: 0.5rem;">Available right now</p>
+                            <div style="height: 6px; background: #cbd5e1; border-radius: 3px; overflow: hidden; margin-top: 0.8rem;">
+                                <div style="height: 100%; width: 33%; background: #ef4444;"></div>
+                            </div>
+                        </div>
+                        <div class="dash-card dash-col-4">
+                            <div class="kpi-header"><span>Stand-up Paddleboards</span></div>
+                            <div class="kpi-value">8 / 10</div>
+                            <p style="color:var(--text-light); font-size:0.9rem; margin-top: 0.5rem;">Available right now</p>
+                            <div style="height: 6px; background: #cbd5e1; border-radius: 3px; overflow: hidden; margin-top: 0.8rem;">
+                                <div style="height: 100%; width: 80%; background: var(--primary-color);"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dash-card">
+                        <div class="dash-card-header">
+                            <span class="dash-card-title">Maintenance & Utilization Log</span>
+                        </div>
+                        <div class="dash-table-wrapper">
+                            <table class="dash-table">
+                                <thead>
+                                    <tr>
+                                        <th>Asset ID</th>
+                                        <th>Type</th>
+                                        <th>Status</th>
+                                        <th>Last Maintenance</th>
+                                        <th>Total Hours Logged</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#SK-04</td>
+                                        <td>Single Kayak</td>
+                                        <td><span class="dash-badge badge-warning">Needs Repair</span></td>
+                                        <td>May 10, 2023</td>
+                                        <td>142 Hours</td>
+                                        <td><a href="#" style="color: var(--primary-color);">Update Status</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#TC-01</td>
+                                        <td>Tandem Canoe</td>
+                                        <td><span class="dash-badge badge-success">Active</span></td>
+                                        <td>Aug 01, 2023</td>
+                                        <td>89 Hours</td>
+                                        <td><a href="#" style="color: var(--primary-color);">Log Maintenance</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#SP-07</td>
+                                        <td>Stand-up Paddleboard</td>
+                                        <td><span class="dash-badge badge-success">Active</span></td>
+                                        <td>Jul 15, 2023</td>
+                                        <td>45 Hours</td>
+                                        <td><a href="#" style="color: var(--primary-color);">Log Maintenance</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Customers -->
+                <section id="customers" class="dash-section" style="margin-bottom: 4rem; padding-top: 2rem;">
+                    <div class="dash-page-title">
+                        <h2>Customer Management</h2>
+                        <p>Review customer profiles and group history.</p>
+                    </div>
+                    <div class="dash-card">
+                        <div class="dash-card-header" style="flex-wrap: wrap; gap: 1rem;">
+                            <span class="dash-card-title">Customer Directory</span>
+                            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; flex: 1; min-width: 0;">
+                                <input type="text" placeholder="Search customers by name or email..." style="flex: 1; min-width: 140px; padding: 0.4rem 0.8rem; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit;">
+                                <button class="btn btn-secondary">Export Data</button>
+                            </div>
+                        </div>
+                        <div class="dash-table-wrapper">
+                            <table class="dash-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email / Phone</th>
+                                        <th>Total Rentals</th>
+                                        <th>Last Visit</th>
+                                        <th>Status</th>
+                                        <th>Profile</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="display: flex; align-items: center; gap: 0.75rem;">
+                                            <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary-light); color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.85rem;">AJ</div>
+                                            <strong>Alex Johnson</strong>
+                                        </td>
+                                        <td><div style="font-size: 0.85rem;">alex.j@example.com<br><span style="color: var(--text-light);">(555) 123-4567</span></div></td>
+                                        <td>4 Trips</td>
+                                        <td>Aug 15, 2023</td>
+                                        <td><span class="dash-badge badge-success">Active Member</span></td>
+                                        <td><a href="#" style="color: var(--primary-color);"><i class="fa-solid fa-arrow-up-right-from-square"></i> View</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="display: flex; align-items: center; gap: 0.75rem;">
+                                            <div style="width: 32px; height: 32px; border-radius: 50%; background: #64748b; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.85rem;">SS</div>
+                                            <strong>Sarah Smith</strong>
+                                        </td>
+                                        <td><div style="font-size: 0.85rem;">s.smith@example.com<br><span style="color: var(--text-light);">(555) 987-6543</span></div></td>
+                                        <td>1 Trip</td>
+                                        <td>Sep 02, 2023</td>
+                                        <td><span class="dash-badge badge-warning">New Customer</span></td>
+                                        <td><a href="#" style="color: var(--primary-color);"><i class="fa-solid fa-arrow-up-right-from-square"></i> View</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="display: flex; align-items: center; gap: 0.75rem;">
+                                            <div style="width: 32px; height: 32px; border-radius: 50%; background: #ef4444; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.85rem;">JD</div>
+                                            <strong>John Doe</strong>
+                                        </td>
+                                        <td><div style="font-size: 0.85rem;">john.d@example.com<br><span style="color: var(--text-light);">(555) 456-7890</span></div></td>
+                                        <td>12 Trips</td>
+                                        <td>Sep 01, 2023</td>
+                                        <td><span class="dash-badge badge-success" style="background: rgba(251, 133, 0, 0.1); color: var(--accent-color);">VIP Status</span></td>
+                                        <td><a href="#" style="color: var(--primary-color);"><i class="fa-solid fa-arrow-up-right-from-square"></i> View</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Operations & Safety -->
+                <section id="operations" class="dash-section" style="margin-bottom: 4rem; padding-top: 2rem;">
+                    <div class="dash-page-title">
+                        <h2>Operations & Safety</h2>
+                        <p>Verify waivers and broadcast current river conditions.</p>
+                    </div>
+
+                    <div class="dash-card" style="margin-bottom: 2rem;">
+                        <div class="dash-card-header">
+                            <span class="dash-card-title">Waiver Verification Queue</span>
+                        </div>
+                        <div class="dash-table-wrapper">
+                            <table class="dash-table">
+                                <thead>
+                                    <tr>
+                                        <th>Booking Ref</th>
+                                        <th>Primary Renter</th>
+                                        <th>Document Type</th>
+                                        <th>Signatures Received</th>
+                                        <th>Status</th>
+                                        <th>Verification</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#BK-9042</td>
+                                        <td>Sarah Smith</td>
+                                        <td>Group Liability (4)</td>
+                                        <td><strong>2 / 4</strong></td>
+                                        <td><span class="dash-badge badge-warning">Missing (2)</span></td>
+                                        <td><button class="btn btn-secondary" style="padding:0.25rem 0.5rem; font-size:0.8rem;">Request Signatures</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#BK-9041</td>
+                                        <td>John Doe</td>
+                                        <td>Adult Liability</td>
+                                        <td><strong>1 / 1</strong></td>
+                                        <td><span class="dash-badge badge-success">Complete</span></td>
+                                        <td><button class="btn btn-primary" style="padding:0.25rem 0.5rem; font-size:0.8rem;"><i class="fa-solid fa-check"></i> Verify PDF</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#BK-9055</td>
+                                        <td>Mike Johnson</td>
+                                        <td>Adult Liability</td>
+                                        <td><strong>0 / 1</strong></td>
+                                        <td><span class="dash-badge badge-warning">Pending</span></td>
+                                        <td><button class="btn btn-secondary" style="padding:0.25rem 0.5rem; font-size:0.8rem;">Send Link</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="dash-bento-grid">
+                        <div class="dash-card dash-col-8">
+                            <div class="dash-card-header">
+                                <span class="dash-card-title">Live River Conditions</span>
+                            </div>
+                            <div class="river-map-placeholder" style="background: none; margin-bottom: 1.5rem;">
+                                <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=River&t=&z=12&ie=UTF8&iwloc=&output=embed" style="border:0; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                                <div class="map-overlay">
+                                    <strong>Water Level:</strong> Moderate &middot; <strong>Flow Rate:</strong> 120 cfs
+                                </div>
+                            </div>
+                            
+                            <h3 style="font-size: 1rem; margin-bottom: 1rem;">Recent Broadcast Logs</h3>
+                            <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+                                <div style="display: flex; gap: 1rem; padding: 0.8rem; background: var(--bg-color); border-radius: 8px;">
+                                    <div style="color: #ef4444;"><i class="fa-solid fa-flag"></i></div>
+                                    <div style="flex: 1;">
+                                        <p style="font-size: 0.9rem; font-weight: 600;">Red Flag - Heavy Currents</p>
+                                        <p style="font-size: 0.85rem; color: var(--text-light);">Broadcasted: Yesterday, 14:00</p>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 1rem; padding: 0.8rem; background: var(--bg-color); border-radius: 8px;">
+                                    <div style="color: #22c55e;"><i class="fa-solid fa-flag"></i></div>
+                                    <div style="flex: 1;">
+                                        <p style="font-size: 0.9rem; font-weight: 600;">Green Flag - Safe Conditions</p>
+                                        <p style="font-size: 0.85rem; color: var(--text-light);">Broadcasted: Today, 08:30</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dash-card dash-col-4">
+                            <div class="dash-card-header">
+                                <span class="dash-card-title">Update Dashboard</span>
+                            </div>
+                            <div style="display:flex; flex-direction:column; gap:1rem;">
+                                <div>
+                                    <label style="display:block; margin-bottom:0.5rem; font-size:0.875rem;">Status Indicator</label>
+                                    <select style="width:100%; padding:0.5rem; border:1px solid rgba(0,0,0,0.1); border-radius:6px; background:var(--bg-color); color:inherit;">
+                                        <option>Safe - Green Flag</option>
+                                        <option>Caution - Yellow Flag</option>
+                                        <option>Closed - Red Flag</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label style="display:block; margin-bottom:0.5rem; font-size:0.875rem;">Advisory Message</label>
+                                    <textarea rows="3" style="width:100%; padding:0.5rem; border:1px solid rgba(0,0,0,0.1); border-radius:6px; background:var(--bg-color); color:inherit;" placeholder="e.g. Higher water flow today..."></textarea>
+                                </div>
+                                <button class="btn btn-primary">Broadcast Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Analytics -->
+                <section id="analytics" class="dash-section" style="margin-bottom: 4rem; padding-top: 2rem;">
+                    <div class="dash-page-title">
+                        <h2>Analytics & Reports</h2>
+                        <p>Analyze rental trends and revenue forecasting.</p>
+                    </div>
+                    <div class="dash-bento-grid">
+                        <div class="dash-card dash-col-6">
+                            <div class="dash-card-header">
+                                <span class="dash-card-title">Monthly Revenue Trends</span>
+                            </div>
+                            <div style="position: relative; height: 250px; width: 100%;">
+                                <canvas id="adminRevChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="dash-card dash-col-6">
+                            <div class="dash-card-header">
+                                <span class="dash-card-title">Bookings by Equipment</span>
+                            </div>
+                            <div style="position: relative; height: 250px; width: 100%; display: flex; justify-content: center;">
+                                <canvas id="adminEquipChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="dash-card dash-col-6">
+                            <div class="dash-card-header">
+                                <span class="dash-card-title">Weekly Utilization Rate</span>
+                            </div>
+                            <div style="position: relative; height: 250px; width: 100%;">
+                                <canvas id="adminUtilChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="dash-card dash-col-6">
+                            <div class="dash-card-header">
+                                <span class="dash-card-title">Customer Demographics</span>
+                            </div>
+                            <div style="position: relative; height: 250px; width: 100%; display: flex; justify-content: center;">
+                                <canvas id="adminDemoChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

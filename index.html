@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayak & Canoe Rental | Riverside</title>
+    <meta name="description"
+        content="Experience the river like never before. Premium kayak and canoe rentals for all skill levels at Riverside.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-water"></i>
+                Riverside
+            </a>
+
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li class="nav-item has-dropdown">
+                        <a href="index.html" class="nav-link">Home <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html" class="dropdown-link">Home 1</a></li>
+                            <li><a href="home2.html" class="dropdown-link">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Dashboard <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="user-dashboard.html" class="dropdown-link">User Dashboard</a></li>
+                            <li><a href="admin-dashboard.html" class="dropdown-link">Admin Dashboard</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-primary nav-login-btn">Sign In</a>
+                <button id="theme-toggle-btn" class="icon-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="lang-toggle" class="icon-btn" aria-label="Toggle LTR/RTL">
+                    <i class="fa-solid fa-globe"></i>
+                </button>
+                <button class="menu-btn" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+        <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <ul class="mobile-dropdown">
+                    <li><a href="index.html" class="mobile-dropdown-link">Home 1</a></li>
+                    <li><a href="home2.html" class="mobile-dropdown-link">Home 2</a></li>
+                </ul>
+            </li>
+            <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About</a></li>
+            <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+            <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+            <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">Dashboard</a>
+                <ul class="mobile-dropdown">
+                    <li><a href="user-dashboard.html" class="mobile-dropdown-link">User Dashboard</a></li>
+                    <li><a href="admin-dashboard.html" class="mobile-dropdown-link">Admin Dashboard</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="mobile-nav-cta">
+            <a href="login.html" class="btn btn-primary"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a>
+            
+        </div>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="hero-bg">
+                <img src="https://images.unsplash.com/photo-1578940695359-2dd6aff3eb84?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8S2F5YWtpbmclMjBvbiUyMGElMjBzZXJlbmUlMjByaXZlcnxlbnwwfHwwfHx8MA%3D%3D=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                    alt="Kayaking on a serene river">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container hero-content">
+                <span class="badge">Premium Kayak & Canoe Rentals</span>
+                <h1 class="hero-title">Experience the River<br>Like Never Before.</h1>
+                <p class="hero-description">Discover the tranquility of nature with our top-of-the-line kayaks and
+                    canoes. Perfect for all skill levels, embarking from the Riverside.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">Book Your Adventure</a>
+                    <a href="#" class="btn btn-secondary"><i class="fa-solid fa-play"></i> Watch Video</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features/Services Section -->
+        <section class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose Riverside</h2>
+                    <p>We provide the best equipment and services for your unforgettable journey.</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-anchor"></i></div>
+                        <h3>Premium Equipment</h3>
+                        <p>Our fleet consists of high-quality, stable, and comfortable kayaks and canoes.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                        <h3>Guided Tours</h3>
+                        <p>Explore hidden gems with our experienced and friendly local guides.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3>Safety First</h3>
+                        <p>We prioritize your safety with top-tier gear and comprehensive briefings.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Fleet Showcase -->
+        <section class="fleet-showcase" style="padding: 5rem 0; background-color: var(--bg-color);">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                    <h2>Our Premium Fleet</h2>
+                    <p style="color: var(--text-light);">Choose the perfect vessel for your next river adventure.</p>
+                </div>
+                <div class="feature-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="feature-card" style="padding: 2rem; border-radius: 12px; border: 1px solid var(--glass-border); text-align: center;">
+                        <i class="fa-solid fa-sailboat" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3 style="margin-bottom: 0.5rem;">Single Kayaks</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1rem; font-size: 0.9rem;">Fast, agile, and perfect for solo explorers navigating tight channels.</p>
+                        <a href="#" class="btn btn-secondary" style="width: 100%;">View Details</a>
+                    </div>
+                    <div class="feature-card" style="padding: 2rem; border-radius: 12px; border: 1px solid var(--glass-border); text-align: center;">
+                        <i class="fa-solid fa-ship" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3 style="margin-bottom: 0.5rem;">Tandem Canoes</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1rem; font-size: 0.9rem;">Spacious and stable, ideal for couples or families bringing a cooler along.</p>
+                        <a href="#" class="btn btn-secondary" style="width: 100%;">View Details</a>
+                    </div>
+                    <div class="feature-card" style="padding: 2rem; border-radius: 12px; border: 1px solid var(--glass-border); text-align: center;">
+                        <i class="fa-solid fa-water" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3 style="margin-bottom: 0.5rem;">Paddleboards</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1rem; font-size: 0.9rem;">Experience the river from a new perspective with our stable SUPs.</p>
+                        <a href="#" class="btn btn-secondary" style="width: 100%;">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Popular Routes -->
+        <section class="popular-routes" style="padding: 5rem 0;">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                    <h2>Popular Routes & Destinations</h2>
+                    <p style="color: var(--text-light);">Discover breathtaking scenery on our hand-picked trails.</p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div style="border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.3s; background: var(--bg-color);">
+                        <div style="height: 200px; background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;"></div>
+                        <div style="padding: 1.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <h3 style="font-size: 1.25rem;">The Whispering Bend</h3>
+                                <span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">Beginner</span>
+                            </div>
+                            <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 1rem;">A gentle 3-mile loop featuring calm waters, perfect for bird watching and families.</p>
+                            <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: var(--text-light);">
+                                <span><i class="fa-solid fa-clock"></i> 2 Hours</span>
+                                <span><i class="fa-solid fa-route"></i> 3 Miles</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.3s; background: var(--bg-color);">
+                        <div style="height: 200px; background: url('https://images.unsplash.com/photo-1544198365-f5d60b6d8190?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;"></div>
+                        <div style="padding: 1.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <h3 style="font-size: 1.25rem;">Canyon Rapids</h3>
+                                <span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">Advanced</span>
+                            </div>
+                            <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 1rem;">Navigate through thrilling class II rapids and stunning steep rock formations.</p>
+                            <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: var(--text-light);">
+                                <span><i class="fa-solid fa-clock"></i> 4 Hours</span>
+                                <span><i class="fa-solid fa-route"></i> 8 Miles</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Customer Testimonials -->
+        <section class="testimonials" style="padding: 5rem 0; background-color: var(--bg-color);">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                    <h2>What Our Paddlers Say</h2>
+                    <p style="color: var(--text-light);">Real stories from real adventurers.</p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div style="padding: 2rem; background: var(--card-bg); border-radius: 12px; box-shadow: var(--shadow-sm);">
+                        <div style="color: #f59e0b; margin-bottom: 1rem; font-size: 1.2rem;">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p style="font-style: italic; color: var(--text-dark); margin-bottom: 1.5rem;">"The equipment was pristine and the staff made sure we knew exactly where we were going. An unforgettable weekend on the river!"</p>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">JD</div>
+                            <div>
+                                <h4 style="font-size: 1rem; margin: 0;">Jane Doe</h4>
+                                <span style="font-size: 0.8rem; color: var(--text-light);">Weekend Explorer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 2rem; background: var(--card-bg); border-radius: 12px; box-shadow: var(--shadow-sm);">
+                        <div style="color: #f59e0b; margin-bottom: 1rem; font-size: 1.2rem;">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p style="font-style: italic; color: var(--text-dark); margin-bottom: 1.5rem;">"We booked a corporate outing and it went flawlessly. The guided tour was both educational and incredibly relaxing."</p>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--secondary-color); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">MR</div>
+                            <div>
+                                <h4 style="font-size: 1rem; margin: 0;">Mike Richards</h4>
+                                <span style="font-size: 0.8rem; color: var(--text-light);">Corporate Client</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Final CTA -->
+        <section class="final-cta" style="padding: 6rem 0; text-align: center; background: linear-gradient(rgba(15, 76, 92, 0.9), rgba(15, 76, 92, 0.9)), url('https://images.unsplash.com/photo-1544252636-23b56f2eabcb?ixlib=rb-4.0.3') center/cover; color: white;">
+            <div class="container">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">Ready to Hit the Water?</h2>
+                <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Book your kayak or canoe today and experience the tranquility and thrill of the Riverside.</p>
+                <a href="#" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Check Availability</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background-color: var(--primary-dark); color: var(--white); padding: 4rem 0 2rem; margin-top: auto;">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+            <div>
+                <a href="index.html" class="logo" style="color: var(--white); margin-bottom: 1rem; display: inline-flex;">
+                    <i class="fa-solid fa-water"></i>
+                    Riverside
+                </a>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">Your premier destination for kayak and canoe rentals. Experience the beauty of the river with our top-quality equipment and expert guides.</p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#" style="color: var(--white); width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; transition: all 0.3s;"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" style="color: var(--white); width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; transition: all 0.3s;"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" style="color: var(--white); width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; transition: all 0.3s;"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 style="font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--white);">Quick Links</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+                    <li><a href="about.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">About Us</a></li>
+                    <li><a href="services.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Our Services</a></li>
+                    <li><a href="home2.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Group Events</a></li>
+                    <li><a href="contact.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 style="font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--white);">Contact Info</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem;">
+                    <li style="display: flex; gap: 1rem; color: rgba(255,255,255,0.7); align-items: flex-start;">
+                        <i class="fa-solid fa-location-dot" style="margin-top: 0.3rem; color: var(--accent-color);"></i>
+                        <span>123 Riverfront Way<br>Adventure City, AC 90210</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; color: rgba(255,255,255,0.7); align-items: center;">
+                        <i class="fa-solid fa-phone" style="color: var(--accent-color);"></i>
+                        <span>(555) 123-4567</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; color: rgba(255,255,255,0.7); align-items: center;">
+                        <i class="fa-solid fa-envelope" style="color: var(--accent-color);"></i>
+                        <span>hello@riveroutpost.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center; color: rgba(255,255,255,0.5); font-size: 0.9rem;">
+            <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+                <p style="margin: 0;">&copy; 2023 Riverside. All rights reserved.</p>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none;">Privacy Policy</a>
+                    <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none;">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

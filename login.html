@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basecamp Login | Riverside</title>
+    <meta name="description" content="Sign in to access your Riverside dashboard, active rentals, and past trips.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Full-screen Expedition Layout -->
+    <div class="expedition-auth-page" style="background-image: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
+        
+        <!-- Glassmorphic Panel -->
+        <div class="expedition-auth-panel">
+            <!-- Action Toggles -->
+            <div class="auth-toggles">
+                <button id="theme-toggle-btn" class="icon-btn auth-toggle-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="lang-toggle" class="icon-btn auth-toggle-btn" aria-label="Toggle LTR/RTL">
+                    <i class="fa-solid fa-language"></i>
+                </button>
+            </div>
+
+            <a href="index.html" class="expedition-auth-logo">
+                <i class="fa-solid fa-water"></i> Riverside
+            </a>
+            
+            <div class="expedition-auth-header">
+                <h2>Basecamp Login</h2>
+                <p>Welcome back! The river is calling.</p>
+            </div>
+
+            <form class="expedition-auth-form" action="user-dashboard.html" method="GET">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="explorer@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="••••••••" required>
+                </div>
+
+                <div class="expedition-auth-options">
+                    <label>
+                        <input type="checkbox" style="accent-color: var(--accent-color);"> Remember me
+                    </label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="expedition-auth-btn">Access Dashboard</button>
+            </form>
+
+            <div class="expedition-auth-footer">
+                <p>Ready to start your journey? <a href="signup.html">Create an account</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme initialization -->
+    <script>
+        const savedTheme = localStorage.getItem('dash-theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

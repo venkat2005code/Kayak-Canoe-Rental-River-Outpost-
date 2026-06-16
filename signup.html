@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Your Expedition | Riverside</title>
+    <meta name="description" content="Create a new account at Riverside to manage your rentals and season passes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Full-screen Expedition Layout -->
+    <div class="expedition-auth-page" style="background-image: url('https://plus.unsplash.com/premium_photo-1769821233693-851a950769e9?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDY5fHx8ZW58MHx8fHx8=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
+        
+        <!-- Glassmorphic Panel -->
+        <div class="expedition-auth-panel">
+            <!-- Action Toggles -->
+            <div class="auth-toggles">
+                <button id="theme-toggle-btn" class="icon-btn auth-toggle-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="lang-toggle" class="icon-btn auth-toggle-btn" aria-label="Toggle LTR/RTL">
+                    <i class="fa-solid fa-language"></i>
+                </button>
+            </div>
+
+            <a href="index.html" class="expedition-auth-logo">
+                <i class="fa-solid fa-water"></i> Riverside
+            </a>
+            
+            <div class="expedition-auth-header">
+                <h2>Join the Adventure</h2>
+                <p>Register today to unlock exclusive member perks.</p>
+            </div>
+
+            <form class="expedition-auth-form" action="user-dashboard.html" method="GET">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Jane Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="explorer@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="••••••••" required>
+                </div>
+
+                <div class="expedition-auth-options" style="justify-content: flex-start;">
+                    <label>
+                        <input type="checkbox" style="accent-color: var(--accent-color);" required> 
+                        I agree to the <a href="#" style="margin-left: 0.3rem;">Terms of Service</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="expedition-auth-btn">Start Expedition</button>
+            </form>
+
+            <div class="expedition-auth-footer">
+                <p>Already an explorer? <a href="login.html">Return to Basecamp</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme initialization -->
+    <script>
+        const savedTheme = localStorage.getItem('dash-theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

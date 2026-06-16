@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Riverside</title>
+    <meta name="description"
+        content="Explore our premium kayak and canoe rental services, guided tours, and group event packages.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-water"></i>
+                Riverside
+            </a>
+
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li class="nav-item has-dropdown">
+                        <a href="index.html" class="nav-link">Home <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html" class="dropdown-link">Home 1</a></li>
+                            <li><a href="home2.html" class="dropdown-link">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Dashboard <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="user-dashboard.html" class="dropdown-link">User Dashboard</a></li>
+                            <li><a href="admin-dashboard.html" class="dropdown-link">Admin Dashboard</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-primary nav-login-btn">Sign In</a>
+                <button id="theme-toggle-btn" class="icon-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="lang-toggle" class="icon-btn" aria-label="Toggle LTR/RTL">
+                    <i class="fa-solid fa-globe"></i>
+                </button>
+                <button class="menu-btn" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+        <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <ul class="mobile-dropdown">
+                    <li><a href="index.html" class="mobile-dropdown-link">Home 1</a></li>
+                    <li><a href="home2.html" class="mobile-dropdown-link">Home 2</a></li>
+                </ul>
+            </li>
+            <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About</a></li>
+            <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+            <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+            <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">Dashboard</a>
+                <ul class="mobile-dropdown">
+                    <li><a href="user-dashboard.html" class="mobile-dropdown-link">User Dashboard</a></li>
+                    <li><a href="admin-dashboard.html" class="mobile-dropdown-link">Admin Dashboard</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="mobile-nav-cta">
+            <a href="login.html" class="btn btn-primary"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a>
+            
+        </div>
+    </div>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="page-header-bg">
+                <img src="https://images.unsplash.com/photo-1695568027891-9a39d3223808?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cml2ZXIlMjB2aWV3fGVufDB8fDB8fHww=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                    alt="River view">
+                <div class="page-header-overlay"></div>
+            </div>
+            <div class="container page-header-content">
+                <h1>Our Services</h1>
+                <p>Everything you need for the perfect day on the water.</p>
+            </div>
+        </section>
+
+        <!-- Services List Section -->
+        <section class="services-section">
+            <div class="container">
+                <div class="service-row">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1551158025-3d352d73a030?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fEtheWFrJTIwUmVudGFsc3xlbnwwfHwwfHx8MA%3D%3D=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Kayak Rentals">
+                    </div>
+                    <div class="service-details">
+                        <h2>Equipment Rentals</h2>
+                        <p>We offer a diverse fleet of kayaks, canoes, and paddleboards to suit all skill levels and
+                            group sizes. Whether you are looking for a solo kayak for a morning workout, a tandem kayak
+                            for you and a partner, or a spacious canoe for the whole family, we have you covered.</p>
+                        <ul class="service-features">
+                            <li><i class="fa-solid fa-check"></i> Life jackets & paddles included</li>
+                            <li><i class="fa-solid fa-check"></i> Hourly, half-day, and full-day rates</li>
+                            <li><i class="fa-solid fa-check"></i> Quick on-water orientation</li>
+                        </ul>
+                        <div class="service-pricing">Starting at <strong>$35</strong> / hour</div>
+                        <a href="#" class="btn btn-primary">Book Rental</a>
+                    </div>
+                </div>
+
+                <div class="service-row reverse">
+                    <div class="service-image">
+                        <img src="https://plus.unsplash.com/premium_photo-1718146018997-a1059f9f9420?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8R3VpZGVkJTIwVG91cnN8ZW58MHx8MHx8fDA%3D=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Guided Tours">
+                    </div>
+                    <div class="service-details">
+                        <h2>Guided Nature Tours</h2>
+                        <p>Join our expert local guides for an immersive journey through the area's most beautiful and
+                            hidden waterways. Learn about local wildlife, history, and ecology while enjoying a
+                            leisurely paddle.</p>
+                        <ul class="service-features">
+                            <li><i class="fa-solid fa-check"></i> Sunrise and sunset tours available</li>
+                            <li><i class="fa-solid fa-check"></i> Small group sizes for a personalized experience</li>
+                            <li><i class="fa-solid fa-check"></i> Perfect for photographers and nature lovers</li>
+                        </ul>
+                        <div class="service-pricing">Starting at <strong>$75</strong> / person</div>
+                        <a href="#" class="btn btn-primary">View Tours</a>
+                    </div>
+                </div>
+
+                <div class="service-row">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Group Events">
+                    </div>
+                    <div class="service-details">
+                        <h2>Group Events & Team Building</h2>
+                        <p>Looking for a unique corporate retreat or a fun group activity? We offer customized packages
+                            for team building, birthdays, school groups, and more. Our experienced staff will handle all
+                            the logistics.</p>
+                        <ul class="service-features">
+                            <li><i class="fa-solid fa-check"></i> Catered lunch options available</li>
+                            <li><i class="fa-solid fa-check"></i> Dedicated instructors and guides</li>
+                            <li><i class="fa-solid fa-check"></i> Discounted group rates</li>
+                        </ul>
+                        <div class="service-pricing">Custom Pricing</div>
+                        <a href="#" class="btn btn-primary">Request a Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </section>
+
+        <!-- Section 3: Membership Packages -->
+        <section class="membership-packages" style="padding: 5rem 0; background-color: var(--bg-color);">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                    <h2>Season Passes & Memberships</h2>
+                    <p style="color: var(--text-light);">The most cost-effective way to enjoy the river all summer long.</p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div class="pricing-card">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Basic Paddler</h3>
+                        <div class="season-price">$150<span style="font-size: 1rem; color: var(--text-light); font-weight: 400;">/season</span></div>
+                        <ul style="list-style: none; text-align: left; margin-bottom: 2rem;">
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fa-solid fa-check" style="color: #10b981;"></i> 10 Half-Day Rentals</li>
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fa-solid fa-check" style="color: #10b981;"></i> Standard Kayaks Only</li>
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem; color: var(--text-light);"><i class="fa-solid fa-xmark"></i> No Weekend Priority</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-dark" style="width: 100%;">Select Basic</a>
+                    </div>
+                    <div class="pricing-card-popular">
+                        <span class="badge badge-primary" style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%);">Most Popular</span>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">River Explorer</h3>
+                        <div class="season-price">$299<span style="font-size: 1rem; color: var(--text-light); font-weight: 400;">/season</span></div>
+                        <ul style="list-style: none; text-align: left; margin-bottom: 2rem;">
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fa-solid fa-check" style="color: #10b981;"></i> Unlimited Rentals</li>
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fa-solid fa-check" style="color: #10b981;"></i> Access to Entire Fleet</li>
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fa-solid fa-check" style="color: #10b981;"></i> Free Guest Pass (1/month)</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary" style="width: 100%;">Select Explorer</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Shuttle Services -->
+        <section class="shuttle-services" style="padding: 5rem 0;">
+            <div class="container">
+                <div class="story-grid">
+                    <div style="order: 2;">
+                        <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--text-dark);">One-Way Trip Shuttles</h2>
+                        <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 2rem;">Want to paddle straight down the river without battling the current on the way back? We offer convenient shuttle services to pick you and your equipment up at designated pull-out spots.</p>
+                        <div style="background: var(--bg-color); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--secondary-color);">
+                            <h4 style="margin-bottom: 0.5rem; color: var(--secondary-color);">How it works:</h4>
+                            <p style="margin: 0; font-size: 0.95rem; color: var(--text-light);">Park your car at the Outpost, enjoy a 3 to 8-mile downriver float, and our shuttle van will be waiting at the finish line to drive you back to your vehicle.</p>
+                        </div>
+                    </div>
+                    <div style="order: 1;">
+                        <img src="https://images.unsplash.com/photo-1509749837427-ac94a2553d0e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8T25lLVdheSUyMFRyaXAlMjBTaHV0dGxlc3xlbnwwfHwwfHx8MA%3D%3D=rb-4.0.3" alt="Shuttle Service" style="width: 100%; border-radius: 12px; box-shadow: var(--shadow-md);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Guided Custom Tours -->
+        <section class="custom-tours" style="padding: 5rem 0; background-color: var(--bg-color);">
+            <div class="container">
+                <div class="story-grid" style="align-items: center;">
+                    <div>
+                        <span class="badge badge-dark" style="margin-bottom: 1rem; display: inline-block;">Custom Experiences</span>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Design Your Dream Tour</h2>
+                        <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 2rem;">Whether it's a romantic sunset proposal on the water, a multi-day camping float, or a specialized wildlife photography excursion, our guides will work with you to plan every detail of your private custom expedition.</p>
+                        <ul style="list-style: none; margin-bottom: 2.5rem;">
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fa-solid fa-check" style="color: #10b981;"></i> Tailored itineraries and routes</li>
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fa-solid fa-check" style="color: #10b981;"></i> Dedicated expert guide</li>
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fa-solid fa-check" style="color: #10b981;"></i> Flexible scheduling for your group</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1.1rem;">Talk to a Trip Planner</a>
+                    </div>
+                    <div style="position: relative;">
+                        <img src="https://plus.unsplash.com/premium_photo-1661893427047-16f6ddc173f6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8U3Vuc2V0JTIwS2F5YWslMjBUb3VyfGVufDB8fDB8fHww=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sunset Kayak Tour" style="width: 100%; border-radius: 12px; box-shadow: var(--shadow-md);">
+                        <div class="floating-card" style="bottom: -20px; right: -20px; left: auto; max-width: 200px;">
+                            <i class="fa-solid fa-map-location-dot" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 0.5rem;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner Call to Action -->
+        <section class="cta-banner">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready for your next adventure?</h2>
+                    <p>Reserve your equipment today and ensure a seamless experience at the Riverside.</p>
+                    <a href="#" class="btn btn-secondary">Check Availability</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background-color: var(--primary-dark); color: var(--white); padding: 4rem 0 2rem; margin-top: auto;">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+            <div>
+                <a href="index.html" class="logo" style="color: var(--white); margin-bottom: 1rem; display: inline-flex;">
+                    <i class="fa-solid fa-water"></i>
+                    Riverside
+                </a>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">Your premier destination for kayak and canoe rentals. Experience the beauty of the river with our top-quality equipment and expert guides.</p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#" style="color: var(--white); width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; transition: all 0.3s;"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" style="color: var(--white); width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; transition: all 0.3s;"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" style="color: var(--white); width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; transition: all 0.3s;"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 style="font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--white);">Quick Links</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+                    <li><a href="about.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">About Us</a></li>
+                    <li><a href="services.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Our Services</a></li>
+                    <li><a href="home2.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Group Events</a></li>
+                    <li><a href="contact.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 style="font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--white);">Contact Info</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem;">
+                    <li style="display: flex; gap: 1rem; color: rgba(255,255,255,0.7); align-items: flex-start;">
+                        <i class="fa-solid fa-location-dot" style="margin-top: 0.3rem; color: var(--accent-color);"></i>
+                        <span>123 Riverfront Way<br>Adventure City, AC 90210</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; color: rgba(255,255,255,0.7); align-items: center;">
+                        <i class="fa-solid fa-phone" style="color: var(--accent-color);"></i>
+                        <span>(555) 123-4567</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; color: rgba(255,255,255,0.7); align-items: center;">
+                        <i class="fa-solid fa-envelope" style="color: var(--accent-color);"></i>
+                        <span>hello@riveroutpost.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center; color: rgba(255,255,255,0.5); font-size: 0.9rem;">
+            <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+                <p style="margin: 0;">&copy; 2023 Riverside. All rights reserved.</p>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none;">Privacy Policy</a>
+                    <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none;">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard | Riverside</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header dash-header">
+        <div class="dash-header-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-water"></i>
+                Riverside
+            </a>
+            
+            <div class="header-actions">
+                <button id="theme-toggle-btn" class="icon-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="rtl-toggle-btn" class="icon-btn" aria-label="Toggle LTR/RTL">
+                    <i class="fa-solid fa-language"></i>
+                </button>
+                <button class="menu-btn" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile sidebar scrim overlay -->
+    <div class="dash-sidebar-scrim" id="dash-sidebar-scrim"></div>
+
+    <div class="dash-wrapper">
+        <!-- Sidebar -->
+        <aside class="dash-sidebar" id="dash-sidebar">
+            <nav class="dash-nav">
+                <ul class="dash-nav-list">
+                    <li class="dash-nav-item">
+                        <a href="#overview" class="dash-nav-link active">
+                            <i class="fa-solid fa-gauge"></i>
+                            <span>Overview</span>
+                        </a>
+                    </li>
+                    <li class="dash-nav-item">
+                        <a href="#my-bookings" class="dash-nav-link">
+                            <i class="fa-solid fa-calendar-check"></i>
+                            <span>My Bookings</span>
+                        </a>
+                    </li>
+                    <li class="dash-nav-item">
+                        <a href="#active-trips" class="dash-nav-link">
+                            <i class="fa-solid fa-compass"></i>
+                            <span>Active Trips</span>
+                        </a>
+                    </li>
+                    <li class="dash-nav-item">
+                        <a href="#rental-tracking" class="dash-nav-link">
+                            <i class="fa-solid fa-stopwatch"></i>
+                            <span>Rental Tracking</span>
+                        </a>
+                    </li>
+                    <li class="dash-nav-item">
+                        <a href="#waivers" class="dash-nav-link">
+                            <i class="fa-solid fa-file-signature"></i>
+                            <span>Digital Waivers</span>
+                        </a>
+                    </li>
+                    <li class="dash-nav-item">
+                        <a href="#profile-analytics" class="dash-nav-link">
+                            <i class="fa-solid fa-user-gear"></i>
+                            <span>Profile & Analytics</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dash-main">
+            <!-- Content -->
+            <div class="dash-content">
+                
+                <!-- Section: Overview -->
+                <section id="overview" class="dash-section" style="margin-bottom: 4rem; padding-top: 2rem;">
+                    <div class="dash-page-title">
+                        <h1>Welcome Back, Alex!</h1>
+                        <p>Track your rentals, view maps, and get ready for the water.</p>
+                    </div>
+
+                    <!-- KPI Cards -->
+                    <div class="dash-kpi-grid">
+                        <div class="dash-card">
+                            <div class="kpi-header">
+                                <span>Upcoming Trips</span>
+                                <div class="kpi-icon blue"><i class="fa-solid fa-calendar-day"></i></div>
+                            </div>
+                            <div class="kpi-value">2</div>
+                            <div class="kpi-trend trend-up">
+                                <i class="fa-solid fa-arrow-up"></i>
+                                <span>Next: This Saturday</span>
+                            </div>
+                        </div>
+                        <div class="dash-card">
+                            <div class="kpi-header">
+                                <span>Active Rental Time</span>
+                                <div class="kpi-icon orange"><i class="fa-solid fa-stopwatch"></i></div>
+                            </div>
+                            <div class="kpi-value">1h 45m</div>
+                            <div class="kpi-trend">
+                                <span>Due back at 4:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="dash-card">
+                            <div class="kpi-header">
+                                <span>Pending Waivers</span>
+                                <div class="kpi-icon red"><i class="fa-solid fa-file-signature"></i></div>
+                            </div>
+                            <div class="kpi-value">1</div>
+                            <div class="kpi-trend trend-down">
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                <span>Action Required</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: My Bookings -->
+                <section id="my-bookings" class="dash-section" style="margin-bottom: 4rem; padding-top: 2rem;">
+                    <div class="dash-page-title">
+                        <h2>My Bookings</h2>
+                        <p>Review your past trips and upcoming adventures.</p>
+                    </div>
+                    <div class="dash-card">
+                        <div class="dash-card-header">
+                            <span class="dash-card-title">Recent Activity</span>
+                        </div>
+                        <div class="dash-table-wrapper">
+                            <table class="dash-table">
+                                <thead>
+                                    <tr>
+                                        <th>Booking Ref</th>
+                                        <th>Date</th>
+                                        <th>Equipment</th>
+                                        <th>Duration</th>
+                                        <th>Payment</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#BK-8472</td>
+                                        <td>Aug 15, 2023</td>
+                                        <td>Tandem Kayak</td>
+                                        <td>4 Hours</td>
+                                        <td>$65.00</td>
+                                        <td><span class="dash-badge badge-success">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#BK-8901</td>
+                                        <td>Sep 02, 2023</td>
+                                        <td>Single Kayak</td>
+                                        <td>Full Day</td>
+                                        <td>$90.00</td>
+                                        <td><span class="dash-badge badge-warning">Upcoming</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#BK-7112</td>
+                                        <td>Jul 10, 2023</td>
+                                        <td>Canoe (3 Person)</td>
+                                        <td>2 Hours</td>
+                                        <td>$45.00</td>
+                                        <td><span class="dash-badge badge-success">Completed</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+                <!-- Section: Active Trips & River Map -->
+                <section id="active-trips" class="dash-section" style="margin-bottom: 4rem; padding-top: 2rem;">
+                    <div class="dash-page-title">
+                        <h2>Active Trips & River Map</h2>
+                        <p>Prepare for your upcoming adventures and check live river conditions.</p>
+                    </div>
+                    
+                    <div class="dash-card" style="margin-bottom: 2rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--glass-border); padding-bottom: 1rem; margin-bottom: 1.5rem;">
+                            <h3 style="font-size: 1.1rem;">Next Trip: Saturday, September 2nd</h3>
+                            <span class="dash-badge badge-warning">In 3 Days</span>
+                        </div>
+                        <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                            <div style="flex: 1; min-width: 140px;">
+                                <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 0.5rem;">Time & Location</p>
+                                <p><strong>09:00 AM - 05:00 PM</strong></p>
+                                <p>Riverside Main Launch</p>
+                            </div>
+                            <div style="flex: 1; min-width: 140px;">
+                                <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 0.5rem;">Equipment Reserved</p>
+                                <p><strong>1x Single Touring Kayak</strong></p>
+                                <p>Includes: 1 PFD, 1 Paddle</p>
+                            </div>
+                            <div style="flex: 1; min-width: 140px;">
+                                <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 0.5rem;">Action Required</p>
+                                <p style="color: #ef4444;"><i class="fa-solid fa-triangle-exclamation"></i> Waiver Signature Pending</p>
+                            </div>
+                        </div>
+                        <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <button class="btn btn-primary" style="flex: 1;">Sign Waiver Now</button>
+                            <button class="btn btn-secondary" style="flex: 1;">Get Directions</button>
+                        </div>
+                    </div>
+
+                    <div class="dash-bento-grid">
+                        <div class="dash-card dash-col-8">
+                            <div class="dash-card-header">
+                                <span class="dash-card-title">Live River Map</span>
+                                <button class="btn btn-secondary">Open Fullscreen Map</button>
+                            </div>
+                            <div class="river-map-placeholder" style="background: none;">
+                                <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=River&t=&z=12&ie=UTF8&iwloc=&output=embed" style="border:0; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                                <div class="map-overlay">
+                                    <strong>Water Level:</strong> Moderate &middot; <strong>Flow Rate:</strong> 120 cfs
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dash-card dash-col-4">
+                            <div class="dash-card-header">
+                                <span class="dash-card-title">Safety Guides</span>
+                            </div>
+                            <div style="display:flex; flex-direction:column; gap:1.25rem;">
+                                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                    <h4 style="font-size: 0.95rem; color: var(--primary-color); display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-cloud-sun"></i> Today's Forecast</h4>
+                                    <div style="background: var(--bg-color); padding: 0.8rem; border-radius: 6px; font-size: 0.9rem;">
+                                        <strong>72°F / Sunny</strong><br>
+                                        <span style="color: var(--text-light);">Wind: 5mph E &bull; Visibility: Clear</span>
+                                    </div>
+                                </div>
+                                
+                                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                    <h4 style="font-size: 0.95rem; color: var(--primary-color); display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-life-ring"></i> Active Advisories</h4>
+                                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;">
+                                        <li style="display: flex; align-items: flex-start; gap: 0.5rem; color: #eab308;">
+                                            <i class="fa-solid fa-triangle-exclamation" style="margin-top: 0.2rem;"></i>
+                                            <span>Shallow rocks reported near Mile Marker 4. Maintain center channel.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                    <h4 style="font-size: 0.95rem; color: var(--primary-color); display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-book-open"></i> Required Reading</h4>
+                                    <a href="#" style="display: block; padding: 0.8rem; border: 1px solid var(--glass-border); border-radius: 6px; text-decoration: none; color: inherit; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--primary-color)'" onmouseout="this.style.borderColor='var(--glass-border)'">
+                                        <strong>Beginner Kayak Manual</strong>
+                                        <div style="font-size: 0.8rem; color: var(--text-light); margin-top: 0.2rem;">Read before your first launch</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Rental Tracking -->
+                <section id="rental-tracking" class="dash-section" style="margin-bottom: 4rem; padding-top: 2rem;">
+                    <div class="dash-page-title">
+                        <h2>Rental Tracking</h2>
+                        <p>Track your active rental time and return status.</p>
+                    </div>
+                    <div class="dash-bento-grid">
+                        <div class="dash-card dash-col-6">
+                            <div class="kpi-header" style="margin-bottom: 1rem;">
+                                <span>Elapsed Time</span>
+                                <div class="kpi-icon blue"><i class="fa-solid fa-stopwatch"></i></div>
+                            </div>
+                            <div class="elapsed-time-display" style="font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1;">01:45:22</div>
+                            <div class="kpi-trend" style="margin-top: 0.5rem;">
+                                <span style="color: var(--text-light);">Started at 09:15 AM</span>
+                            </div>
+                            <div class="dash-progress-container">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.9rem;">
+                                    <span>Time Remaining</span>
+                                    <strong>02:14:38</strong>
+                                </div>
+                                <div class="dash-progress-track">
+                                    <div style="height: 100%; width: 45%; background: var(--primary-color);"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dash-card dash-col-6">
+                            <h3 style="margin-bottom: 1rem; font-size: 1.1rem;">Rental Details</h3>
+                            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.8rem;">
+                                <li style="display: flex; justify-content: space-between;">
+                                    <span style="color: var(--text-light);">Booking Ref:</span>
+                                    <strong>#BK-9021</strong>
+                                </li>
+                                <li style="display: flex; justify-content: space-between;">
+                                    <span style="color: var(--text-light);">Equipment:</span>
+                                    <strong>Tandem Kayak (Blue)</strong>
+                                </li>
+                                <li style="display: flex; justify-content: space-between;">
+                                    <span style="color: var(--text-light);">Expected Return:</span>
+                                    <strong>01:15 PM</strong>
+                                </li>
+                                <li style="display: flex; justify-content: space-between;">
+                                    <span style="color: var(--text-light);">Late Penalty:</span>
+                                    <strong>$15/hr after grace period</strong>
+                                </li>
+                            </ul>
+                            <button class="btn btn-secondary" style="width: 100%; margin-top: 1.5rem;"><i class="fa-solid fa-phone"></i> Contact Outpost Support</button>
+                        </div>
+                    </div>
+                </section>
+                <!-- Section: Digital Waivers -->
+                <section id="waivers" class="dash-section" style="margin-bottom: 4rem; padding-top: 2rem;">
+                    <div class="dash-page-title">
+                        <h2>Digital Waivers</h2>
+                        <p>Sign required documents before you get on the water.</p>
+                    </div>
+                    <div class="dash-card">
+                        <div class="dash-table-wrapper">
+                            <table class="dash-table">
+                                <thead>
+                                    <tr>
+                                        <th>Document</th>
+                                        <th>Associated Booking</th>
+                                        <th>Date Sent</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Liability Waiver (Adult)</td>
+                                        <td>#BK-8901</td>
+                                        <td>Aug 28, 2023</td>
+                                        <td><span class="dash-badge badge-warning">Pending</span></td>
+                                        <td><button class="btn btn-primary" style="padding: 0.4rem 1rem; font-size: 0.9rem;">Sign Now</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Liability Waiver (Adult)</td>
+                                        <td>#BK-8472</td>
+                                        <td>Aug 10, 2023</td>
+                                        <td><span class="dash-badge badge-success">Signed</span></td>
+                                        <td><a href="#" style="color: var(--primary-color);">View PDF</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Minor Consent Form</td>
+                                        <td>#BK-7112</td>
+                                        <td>Jul 05, 2023</td>
+                                        <td><span class="dash-badge badge-success">Signed</span></td>
+                                        <td><a href="#" style="color: var(--primary-color);">View PDF</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Profile & Analytics -->
+                <section id="profile-analytics" class="dash-section" style="margin-bottom: 4rem; padding-top: 2rem;">
+                    <div class="dash-page-title">
+                        <h2>Profile & Analytics</h2>
+                        <p>Manage your account settings and view your rental history.</p>
+                    </div>
+                    
+                    <div class="dash-bento-grid">
+                        <div class="dash-card dash-col-8">
+                            <h3 style="margin-bottom: 1.5rem; font-size: 1.1rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">Personal Information</h3>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                                <div>
+                                    <label style="display: block; font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem;">First Name</label>
+                                    <input type="text" value="Alex" style="width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit;">
+                                </div>
+                                <div>
+                                    <label style="display: block; font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem;">Last Name</label>
+                                    <input type="text" value="Johnson" style="width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit;">
+                                </div>
+                                <div>
+                                    <label style="display: block; font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem;">Email Address</label>
+                                    <input type="email" value="alex.j@example.com" style="width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit;">
+                                </div>
+                                <div>
+                                    <label style="display: block; font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem;">Phone Number</label>
+                                    <input type="tel" value="(555) 123-4567" style="width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit;">
+                                </div>
+                                <div style="grid-column: span 2;">
+                                    <label style="display: block; font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem;">Emergency Contact</label>
+                                    <input type="text" value="Sarah Johnson - (555) 987-6543" style="width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit;">
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" style="margin-top: 1.5rem;">Save Changes</button>
+                        </div>
+                        
+                        <div class="dash-card dash-col-4">
+                            <h3 style="margin-bottom: 1.5rem; font-size: 1.1rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">Preferences</h3>
+                            <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                                <label style="display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
+                                    <span style="font-size: 0.95rem;">Email Notifications</span>
+                                    <input type="checkbox" checked style="width: 18px; height: 18px;">
+                                </label>
+                                <label style="display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
+                                    <span style="font-size: 0.95rem;">SMS Trip Reminders</span>
+                                    <input type="checkbox" checked style="width: 18px; height: 18px;">
+                                </label>
+                                <label style="display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
+                                    <span style="font-size: 0.95rem;">Marketing Emails</span>
+                                    <input type="checkbox" style="width: 18px; height: 18px;">
+                                </label>
+                                <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--glass-border);">
+                                    <button class="btn btn-secondary" style="width: 100%; color: #ef4444; border-color: #ef4444;">Delete Account</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Embedded Analytics inside Profile-Analytics Section -->
+                        <div class="dash-card dash-col-6">
+                            <div class="dash-card-header">
+                                <span class="dash-card-title">Trips per Month</span>
+                            </div>
+                            <div style="position: relative; height: 250px; width: 100%;">
+                                <canvas id="userTripsChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="dash-card dash-col-6">
+                            <div class="dash-card-header">
+                                <span class="dash-card-title">Favorite Equipment</span>
+                            </div>
+                            <div style="position: relative; height: 250px; width: 100%; display: flex; justify-content: center;">
+                                <canvas id="userEquipChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="dash-card dash-col-6">
+                            <div class="dash-card-header">
+                                <span class="dash-card-title">Hours Paddled</span>
+                            </div>
+                            <div style="position: relative; height: 250px; width: 100%;">
+                                <canvas id="userHoursChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="dash-card dash-col-6">
+                            <div class="dash-card-header">
+                                <span class="dash-card-title">Spending History</span>
+                            </div>
+                            <div style="position: relative; height: 250px; width: 100%;">
+                                <canvas id="userSpendChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

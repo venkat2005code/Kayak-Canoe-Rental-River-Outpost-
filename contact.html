@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Riverside</title>
+    <meta name="description"
+        content="Get in touch with Riverside. Reach out to us for bookings, inquiries, or any other questions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-water"></i>
+                Riverside
+            </a>
+
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li class="nav-item has-dropdown">
+                        <a href="index.html" class="nav-link">Home <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html" class="dropdown-link">Home 1</a></li>
+                            <li><a href="home2.html" class="dropdown-link">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Dashboard <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="user-dashboard.html" class="dropdown-link">User Dashboard</a></li>
+                            <li><a href="admin-dashboard.html" class="dropdown-link">Admin Dashboard</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-primary nav-login-btn">Sign In</a>
+                <button id="theme-toggle-btn" class="icon-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="lang-toggle" class="icon-btn" aria-label="Toggle LTR/RTL">
+                    <i class="fa-solid fa-globe"></i>
+                </button>
+                <button class="menu-btn" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+        <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <ul class="mobile-dropdown">
+                    <li><a href="index.html" class="mobile-dropdown-link">Home 1</a></li>
+                    <li><a href="home2.html" class="mobile-dropdown-link">Home 2</a></li>
+                </ul>
+            </li>
+            <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About</a></li>
+            <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+            <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+            <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">Dashboard</a>
+                <ul class="mobile-dropdown">
+                    <li><a href="user-dashboard.html" class="mobile-dropdown-link">User Dashboard</a></li>
+                    <li><a href="admin-dashboard.html" class="mobile-dropdown-link">Admin Dashboard</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="mobile-nav-cta">
+            <a href="login.html" class="btn btn-primary"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a>
+            
+        </div>
+    </div>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="page-header-bg">
+                <img src="https://images.unsplash.com/photo-1498575637358-821023f27355?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFrZSUyMG9mJTIwc3Vuc2V0fGVufDB8fDB8fHww=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                    alt="Lake at sunset">
+                <div class="page-header-overlay"></div>
+            </div>
+            <div class="container page-header-content">
+                <h1>Contact Us</h1>
+                <p>We're here to help you plan your next river adventure.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Get In Touch</h2>
+                        <p>Whether you have a question about our routes, pricing, or need help organizing a group event,
+                            our team is ready to answer all your questions.</p>
+
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="info-text">
+                                <h3>Location</h3>
+                                <p>123 Riverfront Drive, Adventure City, AC 90210</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="info-text">
+                                <h3>Email</h3>
+                                <p>hello@riveroutpost.com</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="info-text">
+                                <h3>Phone</h3>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div class="info-text">
+                                <h3>Hours</h3>
+                                <p>Mon - Sun: 8:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form">
+                            <h3>Send us a Message</h3>
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" class="form-control" placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" class="form-control" placeholder="Your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" class="form-control">
+                                    <option value="">Select a subject...</option>
+                                    <option value="rental">Equipment Rental</option>
+                                    <option value="tour">Guided Tours</option>
+                                    <option value="event">Group Event</option>
+                                    <option value="other">Other Inquiry</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" class="form-control" rows="5"
+                                    placeholder="How can we help you?"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Interactive Location Map -->
+        <section class="location-map" style="padding: 5rem 0 0 0;">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                    <h2>Interactive Location Map</h2>
+                    <p style="color: var(--text-light);">Find us easily on the riverbank.</p>
+                </div>
+            </div>
+            <div style="width: 100%; height: 400px;">
+                <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=River&t=&z=13&ie=UTF8&iwloc=&output=embed" style="border:0;"></iframe>
+            </div>
+        </section>
+
+        <!-- Section 4: Operating Hours -->
+        <section class="operating-hours" style="padding: 5rem 0; background-color: var(--bg-color);">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                    <h2>Operating Hours & Seasons</h2>
+                    <p style="color: var(--text-light);">Plan your visit according to our seasonal schedules.</p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div style="background: var(--card-bg); padding: 2rem; border-radius: 12px; border: 1px solid var(--glass-border); text-align: center;">
+                        <i class="fa-solid fa-sun" style="font-size: 2.5rem; color: #f59e0b; margin-bottom: 1rem;"></i>
+                        <h3 style="margin-bottom: 1rem;">Summer Season (Peak)</h3>
+                        <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 1rem;">May 1st - September 30th</p>
+                        <ul style="list-style: none; padding: 0; margin: 0; color: var(--text-dark);">
+                            <li style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(0,0,0,0.05); padding: 0.5rem 0;"><span>Monday - Friday</span><strong>8:00 AM - 7:00 PM</strong></li>
+                            <li style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(0,0,0,0.05); padding: 0.5rem 0;"><span>Saturday - Sunday</span><strong>7:00 AM - 8:00 PM</strong></li>
+                            <li style="display: flex; justify-content: space-between; padding: 0.5rem 0;"><span>Holidays</span><strong>7:00 AM - 8:00 PM</strong></li>
+                        </ul>
+                    </div>
+                    <div style="background: var(--card-bg); padding: 2rem; border-radius: 12px; border: 1px solid var(--glass-border); text-align: center;">
+                        <i class="fa-solid fa-leaf" style="font-size: 2.5rem; color: #10b981; margin-bottom: 1rem;"></i>
+                        <h3 style="margin-bottom: 1rem;">Spring / Fall Season</h3>
+                        <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 1rem;">March-April & October-November</p>
+                        <ul style="list-style: none; padding: 0; margin: 0; color: var(--text-dark);">
+                            <li style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(0,0,0,0.05); padding: 0.5rem 0;"><span>Wednesday - Friday</span><strong>9:00 AM - 5:00 PM</strong></li>
+                            <li style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(0,0,0,0.05); padding: 0.5rem 0;"><span>Saturday - Sunday</span><strong>8:00 AM - 6:00 PM</strong></li>
+                            <li style="display: flex; justify-content: space-between; padding: 0.5rem 0; color: var(--text-light);"><span>Mon - Tue</span><strong>Closed</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Emergency Contacts -->
+        <section class="emergency-contacts" style="padding: 5rem 0;">
+            <div class="container">
+                <div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); padding: 3rem; border-radius: 12px; text-align: center;">
+                    <div style="width: 60px; height: 60px; background: #ef4444; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 1.5rem;">
+                        <i class="fa-solid fa-truck-medical"></i>
+                    </div>
+                    <h2 style="color: #b91c1c; margin-bottom: 1rem;">Emergency River Support</h2>
+                    <p style="color: var(--text-dark); max-width: 600px; margin: 0 auto 2rem;">If you are currently on the water and experiencing an emergency, please use the contacts below immediately. For medical emergencies, always dial 911 first.</p>
+                    <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                        <div style="background: white; padding: 1.5rem 2.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); border: 2px solid #ef4444;">
+                            <span style="display: block; font-size: 0.85rem; color: var(--text-light); text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem;">River Rescue Team</span>
+                            <strong style="font-size: 1.5rem; color: #b91c1c;">(555) 911-0001</strong>
+                        </div>
+                        <div style="background: white; padding: 1.5rem 2.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); border: 2px solid #f59e0b;">
+                            <span style="display: block; font-size: 0.85rem; color: var(--text-light); text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem;">Lost Equipment Hotline</span>
+                            <strong style="font-size: 1.5rem; color: #d97706;">(555) 123-9999</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Newsletter Signup -->
+        <section class="newsletter" style="padding: 5rem 0; background: var(--primary-color); color: white; text-align: center;">
+            <div class="container">
+                <div style="max-width: 600px; margin: 0 auto;">
+                    <i class="fa-regular fa-envelope-open" style="font-size: 3rem; margin-bottom: 1.5rem; opacity: 0.9;"></i>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">Join the Riverside Community</h2>
+                    <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem;">Subscribe to our newsletter for exclusive discounts, seasonal route updates, and community event invitations.</p>
+                    <form style="display: flex; gap: 0.5rem; max-width: 500px; margin: 0 auto;">
+                        <input type="email" placeholder="Enter your email address" style="flex: 1; padding: 1rem 1.5rem; border: none; border-radius: 6px; font-family: inherit; font-size: 1rem; outline: none;">
+                        <button type="submit" class="btn btn-secondary" style="border: none; cursor: pointer;">Subscribe</button>
+                    </form>
+                    <p style="font-size: 0.8rem; margin-top: 1rem; opacity: 0.7;">We respect your privacy. No spam, ever.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background-color: var(--primary-dark); color: var(--white); padding: 4rem 0 2rem; margin-top: auto;">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+            <div>
+                <a href="index.html" class="logo" style="color: var(--white); margin-bottom: 1rem; display: inline-flex;">
+                    <i class="fa-solid fa-water"></i>
+                    Riverside
+                </a>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">Your premier destination for kayak and canoe rentals. Experience the beauty of the river with our top-quality equipment and expert guides.</p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#" style="color: var(--white); width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; transition: all 0.3s;"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" style="color: var(--white); width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; transition: all 0.3s;"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" style="color: var(--white); width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; transition: all 0.3s;"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 style="font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--white);">Quick Links</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+                    <li><a href="about.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">About Us</a></li>
+                    <li><a href="services.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Our Services</a></li>
+                    <li><a href="home2.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Group Events</a></li>
+                    <li><a href="contact.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 style="font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--white);">Contact Info</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem;">
+                    <li style="display: flex; gap: 1rem; color: rgba(255,255,255,0.7); align-items: flex-start;">
+                        <i class="fa-solid fa-location-dot" style="margin-top: 0.3rem; color: var(--accent-color);"></i>
+                        <span>123 Riverfront Way<br>Adventure City, AC 90210</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; color: rgba(255,255,255,0.7); align-items: center;">
+                        <i class="fa-solid fa-phone" style="color: var(--accent-color);"></i>
+                        <span>(555) 123-4567</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; color: rgba(255,255,255,0.7); align-items: center;">
+                        <i class="fa-solid fa-envelope" style="color: var(--accent-color);"></i>
+                        <span>hello@riveroutpost.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center; color: rgba(255,255,255,0.5); font-size: 0.9rem;">
+            <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+                <p style="margin: 0;">&copy; 2023 Riverside. All rights reserved.</p>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none;">Privacy Policy</a>
+                    <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none;">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
