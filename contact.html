@@ -19,8 +19,12 @@
     <header class="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <i class="fa-solid fa-water"></i>
-                Riverside
+                <svg class="brand-icon" viewBox="0 0 40 40" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;">
+        <path d="M2 25 Q 10 15, 20 25 T 38 25" />
+        <path d="M6 32 Q 14 22, 20 32 T 34 32" />
+        <path d="M20 5 L 12 18 H 28 Z" fill="currentColor" stroke="none" />
+    </svg>
+    <span style="font-family: 'Outfit', sans-serif; font-weight: 700; letter-spacing: -0.5px;">Riverside</span>
             </a>
 
             <nav class="navbar">
@@ -34,6 +38,8 @@
                     </li>
                     <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="rentals.html" class="nav-link">Rentals</a></li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                     <li class="nav-item has-dropdown">
                         <a href="#" class="nav-link">Dashboard <i class="fa-solid fa-chevron-down"></i></a>
@@ -46,7 +52,6 @@
             </nav>
 
             <div class="header-actions">
-                <a href="login.html" class="btn btn-primary nav-login-btn">Sign In</a>
                 <button id="theme-toggle-btn" class="icon-btn" aria-label="Toggle Theme">
                     <i class="fa-solid fa-moon"></i>
                 </button>
@@ -56,6 +61,7 @@
                 <button class="menu-btn" aria-label="Open menu">
                     <i class="fa-solid fa-bars"></i>
                 </button>
+                <a href="login.html" class="btn btn-primary nav-login-btn">Sign In</a>
             </div>
         </div>
     </header>
@@ -72,6 +78,8 @@
             </li>
             <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About</a></li>
             <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+            <li class="mobile-nav-item"><a href="rentals.html" class="mobile-nav-link">Rentals</a></li>
+            <li class="mobile-nav-item"><a href="gallery.html" class="mobile-nav-link">Gallery</a></li>
             <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
             <li class="mobile-nav-item">
                 <a href="#" class="mobile-nav-link">Dashboard</a>
@@ -91,7 +99,7 @@
         <!-- Page Header -->
         <section class="page-header">
             <div class="page-header-bg">
-                <img src="https://images.unsplash.com/photo-1498575637358-821023f27355?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFrZSUyMG9mJTIwc3Vuc2V0fGVufDB8fDB8fHww=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                <img src="https://plus.unsplash.com/premium_photo-1661893427047-16f6ddc173f6?w=1920&auto=format&fit=crop&q=80"
                     alt="Lake at sunset">
                 <div class="page-header-overlay"></div>
             </div>
@@ -176,6 +184,59 @@
             </div>
         </section>
 
+        <!-- FAQ Section -->
+        <section class="faq-section" style="padding: 5rem 0; background-color: var(--bg-color);">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                    <span class="badge badge-primary">FAQ</span>
+                    <h2>Frequently Asked Questions</h2>
+                    <p style="color: var(--text-light);">Find answers to some of the most common questions about our services.</p>
+                </div>
+                
+                <div class="faq-grid" style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;">
+                    <details class="faq-item" style="background: var(--card-bg); border-radius: 12px; border: 1px solid var(--glass-border); overflow: hidden;">
+                        <summary style="padding: 1.5rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: space-between; color: var(--text-dark);">
+                            Do I need any prior experience to rent a kayak?
+                            <i class="fa-solid fa-chevron-down faq-icon" style="color: var(--primary-color);"></i>
+                        </summary>
+                        <div style="padding: 0 1.5rem 1.5rem; color: var(--text-light); line-height: 1.6;">
+                            Not at all! Our sit-on-top solo and tandem kayaks are extremely stable and beginner-friendly. Our team will also provide a safety briefing and basic paddling instructions before you launch.
+                        </div>
+                    </details>
+                    
+                    <details class="faq-item" style="background: var(--card-bg); border-radius: 12px; border: 1px solid var(--glass-border); overflow: hidden;">
+                        <summary style="padding: 1.5rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: space-between; color: var(--text-dark);">
+                            What happens if the weather is bad?
+                            <i class="fa-solid fa-chevron-down faq-icon" style="color: var(--primary-color);"></i>
+                        </summary>
+                        <div style="padding: 0 1.5rem 1.5rem; color: var(--text-light); line-height: 1.6;">
+                            Safety is our top priority. If we have to cancel rentals due to thunderstorms, high winds, or unsafe water levels, you will receive a full refund or the option to reschedule your reservation.
+                        </div>
+                    </details>
+                    
+                    <details class="faq-item" style="background: var(--card-bg); border-radius: 12px; border: 1px solid var(--glass-border); overflow: hidden;">
+                        <summary style="padding: 1.5rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: space-between; color: var(--text-dark);">
+                            Can I bring my dog?
+                            <i class="fa-solid fa-chevron-down faq-icon" style="color: var(--primary-color);"></i>
+                        </summary>
+                        <div style="padding: 0 1.5rem 1.5rem; color: var(--text-light); line-height: 1.6;">
+                            Yes! Well-behaved dogs are welcome on our canoes and tandem kayaks. Small dogs can also ride on solo kayaks. We do not provide dog life jackets, so please bring your own if needed.
+                        </div>
+                    </details>
+                    
+                    <details class="faq-item" style="background: var(--card-bg); border-radius: 12px; border: 1px solid var(--glass-border); overflow: hidden;">
+                        <summary style="padding: 1.5rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: space-between; color: var(--text-dark);">
+                            Is there an age limit for children?
+                            <i class="fa-solid fa-chevron-down faq-icon" style="color: var(--primary-color);"></i>
+                        </summary>
+                        <div style="padding: 0 1.5rem 1.5rem; color: var(--text-light); line-height: 1.6;">
+                            Children must be at least 5 years old to ride in a canoe or tandem kayak with an adult. To paddle a solo kayak independently, participants must be at least 12 years old.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
         <!-- Section 3: Interactive Location Map -->
         <section class="location-map" style="padding: 5rem 0 0 0;">
             <div class="container">
@@ -202,9 +263,9 @@
                         <h3 style="margin-bottom: 1rem;">Summer Season (Peak)</h3>
                         <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 1rem;">May 1st - September 30th</p>
                         <ul style="list-style: none; padding: 0; margin: 0; color: var(--text-dark);">
-                            <li style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(0,0,0,0.05); padding: 0.5rem 0;"><span>Monday - Friday</span><strong>8:00 AM - 7:00 PM</strong></li>
-                            <li style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(0,0,0,0.05); padding: 0.5rem 0;"><span>Saturday - Sunday</span><strong>7:00 AM - 8:00 PM</strong></li>
-                            <li style="display: flex; justify-content: space-between; padding: 0.5rem 0;"><span>Holidays</span><strong>7:00 AM - 8:00 PM</strong></li>
+                            <li class="hours-item"><span>Monday - Friday</span><strong>8:00 AM - 7:00 PM</strong></li>
+                            <li class="hours-item"><span>Saturday - Sunday</span><strong>7:00 AM - 8:00 PM</strong></li>
+                            <li class="hours-item" style="border-bottom: none;"><span>Holidays</span><strong>7:00 AM - 8:00 PM</strong></li>
                         </ul>
                     </div>
                     <div style="background: var(--card-bg); padding: 2rem; border-radius: 12px; border: 1px solid var(--glass-border); text-align: center;">
@@ -212,9 +273,9 @@
                         <h3 style="margin-bottom: 1rem;">Spring / Fall Season</h3>
                         <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 1rem;">March-April & October-November</p>
                         <ul style="list-style: none; padding: 0; margin: 0; color: var(--text-dark);">
-                            <li style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(0,0,0,0.05); padding: 0.5rem 0;"><span>Wednesday - Friday</span><strong>9:00 AM - 5:00 PM</strong></li>
-                            <li style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(0,0,0,0.05); padding: 0.5rem 0;"><span>Saturday - Sunday</span><strong>8:00 AM - 6:00 PM</strong></li>
-                            <li style="display: flex; justify-content: space-between; padding: 0.5rem 0; color: var(--text-light);"><span>Mon - Tue</span><strong>Closed</strong></li>
+                            <li class="hours-item"><span>Wednesday - Friday</span><strong>9:00 AM - 5:00 PM</strong></li>
+                            <li class="hours-item"><span>Saturday - Sunday</span><strong>8:00 AM - 6:00 PM</strong></li>
+                            <li class="hours-item" style="border-bottom: none; color: var(--text-light);"><span>Mon - Tue</span><strong>Closed</strong></li>
                         </ul>
                     </div>
                 </div>
@@ -253,7 +314,7 @@
                     <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem;">Subscribe to our newsletter for exclusive discounts, seasonal route updates, and community event invitations.</p>
                     <form style="display: flex; gap: 0.5rem; max-width: 500px; margin: 0 auto;">
                         <input type="email" placeholder="Enter your email address" style="flex: 1; padding: 1rem 1.5rem; border: none; border-radius: 6px; font-family: inherit; font-size: 1rem; outline: none;">
-                        <button type="submit" class="btn btn-secondary" style="border: none; cursor: pointer;">Subscribe</button>
+                        <button type="submit" class="btn btn-primary" style="cursor: pointer;">Subscribe</button>
                     </form>
                     <p style="font-size: 0.8rem; margin-top: 1rem; opacity: 0.7;">We respect your privacy. No spam, ever.</p>
                 </div>
@@ -266,8 +327,12 @@
         <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
             <div>
                 <a href="index.html" class="logo" style="color: var(--white); margin-bottom: 1rem; display: inline-flex;">
-                    <i class="fa-solid fa-water"></i>
-                    Riverside
+                    <svg class="brand-icon" viewBox="0 0 40 40" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;">
+        <path d="M2 25 Q 10 15, 20 25 T 38 25" />
+        <path d="M6 32 Q 14 22, 20 32 T 34 32" />
+        <path d="M20 5 L 12 18 H 28 Z" fill="currentColor" stroke="none" />
+    </svg>
+    <span style="font-family: 'Outfit', sans-serif; font-weight: 700; letter-spacing: -0.5px;">Riverside</span>
                 </a>
                 <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">Your premier destination for kayak and canoe rentals. Experience the beauty of the river with our top-quality equipment and expert guides.</p>
                 <div style="display: flex; gap: 1rem;">
@@ -282,6 +347,8 @@
                 <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
                     <li><a href="about.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">About Us</a></li>
                     <li><a href="services.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Our Services</a></li>
+                    <li><a href="rentals.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Rentals</a></li>
+                    <li><a href="gallery.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Gallery</a></li>
                     <li><a href="home2.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Group Events</a></li>
                     <li><a href="contact.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Contact Us</a></li>
                 </ul>

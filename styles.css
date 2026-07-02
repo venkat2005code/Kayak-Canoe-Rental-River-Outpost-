@@ -1,3 +1,8 @@
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
 :root {
     --primary-color: #0f4c5c;
     --primary-dark: #052831;
@@ -18,7 +23,7 @@
 }
 
 [data-theme="dark"] {
-    --primary-color: #0a192f;
+    --primary-color: #48cae4;
     --primary-dark: #061021;
     --primary-light: #112240;
     --accent-color: #fb8500;
@@ -271,6 +276,14 @@ body {
     overflow-x: hidden;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+p {
+    font-weight: 400;
+}
+
 /* RTL Support */
 html[dir="rtl"] {
     text-align: right;
@@ -366,7 +379,7 @@ html[dir="rtl"] .nav-link i {
     align-items: center;
     gap: 0.5rem;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--white);
     text-decoration: none;
     transition: var(--transition);
@@ -595,7 +608,7 @@ html[dir="rtl"] .hero-overlay {
 
 .hero-title {
     font-size: 4.5rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.1;
     margin-bottom: 1.5rem;
     animation: fadeInUp 1s ease;
@@ -758,6 +771,10 @@ html[dir="rtl"] .hero-overlay {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .page-header-content h1 {
+        font-size: 2.5rem !important;
+    }
+
     .nav-list {
         display: none;
     }
@@ -868,7 +885,8 @@ html[dir="rtl"] .hero-overlay {
 /* Home 2 Hero Split Layout */
 .hero-split {
     background: var(--card-bg);
-    padding-top: 100px;
+    padding-top: 120px;
+    padding-bottom: 6rem;
     /* Offset for header */
 }
 
@@ -998,7 +1016,7 @@ html[dir="rtl"] .card-content {
     display: inline-block;
     margin-top: 1rem;
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--primary-color);
 }
 
@@ -1032,7 +1050,7 @@ html[dir="rtl"] .card-content {
 
 .season-price {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--primary-color);
     margin-bottom: 1.5rem;
 }
@@ -1106,7 +1124,7 @@ html[dir="rtl"] .card-content {
 
 .page-header-content h1 {
     font-size: 3.5rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 1rem;
     animation: fadeInUp 0.8s ease;
 }
@@ -1654,7 +1672,7 @@ html[dir="rtl"] .dash-sidebar.collapsed ~ .dash-main {
 
 .dash-page-title h1 {
     font-size: 1.75rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text-dark);
 }
 
@@ -1710,7 +1728,7 @@ html[dir="rtl"] .dash-sidebar.collapsed ~ .dash-main {
 
 .kpi-value {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 0.5rem;
     color: var(--text-dark);
 }
@@ -2077,7 +2095,7 @@ html[dir="rtl"] .dash-table th, html[dir="rtl"] .dash-table td {
     justify-content: center;
     gap: 0.5rem;
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text-dark);
     text-decoration: none;
     margin-top: 2rem;
@@ -2284,6 +2302,479 @@ html[dir="rtl"] .dash-table th, html[dir="rtl"] .dash-table td {
     margin-right: 0.5rem;
 }
 
-[data-theme="dark"] .faq-icon {
+   
+
+
+/* ---- NEW SERVICE PAGE STYLES ---- */
+
+/* Rental Grid */
+.rental-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+.rental-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid var(--glass-border);
+    display: flex;
+    flex-direction: column;
+}
+.rental-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+.rental-image {
+    position: relative;
+    height: 200px;
+}
+.rental-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.rental-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--accent-color);
+    color: white;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.rental-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.rental-content h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    color: var(--text-dark);
+}
+.rental-content p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+.rental-features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--glass-border);
+}
+.rental-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+.rental-features i {
+    color: #10b981;
+}
+.rental-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+.rental-price strong {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+}
+.rental-price span {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Tours Split Layout */
+.tour-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+.tour-feature {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--glass-border);
+}
+.tour-feature-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(15, 76, 92, 0.1);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+.tour-image-grid {
+    position: relative;
+    height: 100%;
+    min-height: 400px;
+}
+.img-main {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: var(--shadow-md);
+}
+.img-sub {
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: 8px solid var(--bg-color);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Safety Section */
+.safety-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+.safety-card {
+    text-align: center;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+}
+.safety-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1.5rem;
+    background: rgba(251, 133, 0, 0.1);
     color: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+}
+
+/* Membership Revamp */
+.membership-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: center;
+}
+.benefits-list {
+    list-style: none;
+}
+.benefits-list li {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+.benefit-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+.membership-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* Shuttle Banner */
+.shuttle-banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--primary-color);
+    border-radius: 24px;
+    overflow: hidden;
+}
+.shuttle-content {
+    padding: 4rem;
+}
+.shuttle-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.step {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--white);
+}
+.step-num {
+    width: 32px;
+    height: 32px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+.shuttle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+.modal-container {
+    background: var(--card-bg);
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(20px);
+    transition: var(--transition);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+.modal-overlay.active .modal-container {
+    transform: translateY(0);
+}
+.modal-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--glass-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-header h3 {
+    margin: 0;
+    color: var(--text-dark);
+}
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: var(--transition);
+}
+.close-modal:hover {
+    color: var(--accent-color);
+    transform: rotate(90deg);
+}
+.modal-body {
+    padding: 1.5rem;
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    background: var(--bg-color);
+    color: var(--text-dark);
+    font-family: inherit;
+}
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* Dark Mode specific overrides for new sections */
+[data-theme="dark"] .tour-feature-icon {
+    background: rgba(251, 133, 0, 0.1);
+    color: var(--accent-color);
+}
+[data-theme="dark"] .benefit-icon {
+    background: rgba(251, 133, 0, 0.1);
+    color: var(--accent-color);
+}
+[data-theme="dark"] .shuttle-banner {
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+[data-theme="dark"] .shuttle-content h2,
+[data-theme="dark"] .shuttle-content .step span {
+    color: var(--text-dark) !important;
+}
+[data-theme="dark"] .shuttle-content p {
+    color: var(--text-light) !important;
+}
+[data-theme="dark"] .shuttle-content .btn-primary {
+    background: var(--accent-color) !important;
+    color: white !important;
+}
+
+/* Responsive Overrides */
+@media (max-width: 992px) {
+    .tour-split, .membership-wrapper, .shuttle-banner {
+        grid-template-columns: 1fr;
+    }
+    .img-main, .img-sub {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border: none;
+    }
+    .tour-image-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        min-height: auto;
+    }
+}
+
+/* ---- NEW GALLERY PAGE STYLES ---- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.gallery-item:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-overlay span {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 500;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay span {
+    transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+    .item-wide {
+        grid-column: span 2;
+    }
+    .item-tall {
+        grid-row: span 2;
+    }
+}
+
+/* ---- FAQ ACCORDION STYLES ---- */
+.faq-item summary {
+    list-style: none;
+}
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+.faq-item[open] .faq-icon {
+    transform: rotate(180deg);
+}
+.faq-icon {
+    transition: transform 0.3s ease;
+}
+
+/* Operating Hours List Items */
+.hours-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 0.5rem 0;
+    gap: 1rem;
+}
+
+@media (max-width: 360px) {
+    .hours-item {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
 }

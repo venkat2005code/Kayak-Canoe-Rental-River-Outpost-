@@ -19,8 +19,12 @@
     <header class="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <i class="fa-solid fa-water"></i>
-                Riverside
+                <svg class="brand-icon" viewBox="0 0 40 40" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;">
+        <path d="M2 25 Q 10 15, 20 25 T 38 25" />
+        <path d="M6 32 Q 14 22, 20 32 T 34 32" />
+        <path d="M20 5 L 12 18 H 28 Z" fill="currentColor" stroke="none" />
+    </svg>
+    <span style="font-family: 'Outfit', sans-serif; font-weight: 700; letter-spacing: -0.5px;">Riverside</span>
             </a>
 
             <nav class="navbar">
@@ -34,6 +38,8 @@
                     </li>
                     <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="rentals.html" class="nav-link">Rentals</a></li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                     <li class="nav-item has-dropdown">
                         <a href="#" class="nav-link">Dashboard <i class="fa-solid fa-chevron-down"></i></a>
@@ -46,7 +52,6 @@
             </nav>
 
             <div class="header-actions">
-                <a href="login.html" class="btn btn-primary nav-login-btn">Sign In</a>
                 <button id="theme-toggle-btn" class="icon-btn" aria-label="Toggle Theme">
                     <i class="fa-solid fa-moon"></i>
                 </button>
@@ -56,6 +61,7 @@
                 <button class="menu-btn" aria-label="Open menu">
                     <i class="fa-solid fa-bars"></i>
                 </button>
+                <a href="login.html" class="btn btn-primary nav-login-btn">Sign In</a>
             </div>
         </div>
     </header>
@@ -72,6 +78,8 @@
             </li>
             <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About</a></li>
             <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+            <li class="mobile-nav-item"><a href="rentals.html" class="mobile-nav-link">Rentals</a></li>
+            <li class="mobile-nav-item"><a href="gallery.html" class="mobile-nav-link">Gallery</a></li>
             <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
             <li class="mobile-nav-item">
                 <a href="#" class="mobile-nav-link">Dashboard</a>
@@ -91,7 +99,7 @@
         <!-- Page Header -->
         <section class="page-header">
             <div class="page-header-bg">
-                <img src="https://images.unsplash.com/photo-1695568027891-9a39d3223808?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cml2ZXIlMjB2aWV3fGVufDB8fDB8fHww=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                <img src="https://plus.unsplash.com/premium_photo-1682091939983-5768f5834e29?w=1920&auto=format&fit=crop&q=80"
                     alt="River view">
                 <div class="page-header-overlay"></div>
             </div>
@@ -101,145 +109,245 @@
             </div>
         </section>
 
-        <!-- Services List Section -->
-        <section class="services-section">
-            <div class="container">
-                <div class="service-row">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1551158025-3d352d73a030?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fEtheWFrJTIwUmVudGFsc3xlbnwwfHwwfHx8MA%3D%3D=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Kayak Rentals">
-                    </div>
-                    <div class="service-details">
-                        <h2>Equipment Rentals</h2>
-                        <p>We offer a diverse fleet of kayaks, canoes, and paddleboards to suit all skill levels and
-                            group sizes. Whether you are looking for a solo kayak for a morning workout, a tandem kayak
-                            for you and a partner, or a spacious canoe for the whole family, we have you covered.</p>
-                        <ul class="service-features">
-                            <li><i class="fa-solid fa-check"></i> Life jackets & paddles included</li>
-                            <li><i class="fa-solid fa-check"></i> Hourly, half-day, and full-day rates</li>
-                            <li><i class="fa-solid fa-check"></i> Quick on-water orientation</li>
-                        </ul>
-                        <div class="service-pricing">Starting at <strong>$35</strong> / hour</div>
-                        <a href="#" class="btn btn-primary">Book Rental</a>
-                    </div>
-                </div>
-
-                <div class="service-row reverse">
-                    <div class="service-image">
-                        <img src="https://plus.unsplash.com/premium_photo-1718146018997-a1059f9f9420?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8R3VpZGVkJTIwVG91cnN8ZW58MHx8MHx8fDA%3D=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Guided Tours">
-                    </div>
-                    <div class="service-details">
-                        <h2>Guided Nature Tours</h2>
-                        <p>Join our expert local guides for an immersive journey through the area's most beautiful and
-                            hidden waterways. Learn about local wildlife, history, and ecology while enjoying a
-                            leisurely paddle.</p>
-                        <ul class="service-features">
-                            <li><i class="fa-solid fa-check"></i> Sunrise and sunset tours available</li>
-                            <li><i class="fa-solid fa-check"></i> Small group sizes for a personalized experience</li>
-                            <li><i class="fa-solid fa-check"></i> Perfect for photographers and nature lovers</li>
-                        </ul>
-                        <div class="service-pricing">Starting at <strong>$75</strong> / person</div>
-                        <a href="#" class="btn btn-primary">View Tours</a>
-                    </div>
-                </div>
-
-                <div class="service-row">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Group Events">
-                    </div>
-                    <div class="service-details">
-                        <h2>Group Events & Team Building</h2>
-                        <p>Looking for a unique corporate retreat or a fun group activity? We offer customized packages
-                            for team building, birthdays, school groups, and more. Our experienced staff will handle all
-                            the logistics.</p>
-                        <ul class="service-features">
-                            <li><i class="fa-solid fa-check"></i> Catered lunch options available</li>
-                            <li><i class="fa-solid fa-check"></i> Dedicated instructors and guides</li>
-                            <li><i class="fa-solid fa-check"></i> Discounted group rates</li>
-                        </ul>
-                        <div class="service-pricing">Custom Pricing</div>
-                        <a href="#" class="btn btn-primary">Request a Quote</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        </section>
-
-        <!-- Section 3: Membership Packages -->
-        <section class="membership-packages" style="padding: 5rem 0; background-color: var(--bg-color);">
+        <!-- Section 1: Rentals -->
+        <section class="rentals-section" style="padding: 5rem 0;">
             <div class="container">
                 <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
-                    <h2>Season Passes & Memberships</h2>
-                    <p style="color: var(--text-light);">The most cost-effective way to enjoy the river all summer long.</p>
+                    <span class="badge badge-primary">Equipment Rentals</span>
+                    <h2>Choose Your Adventure</h2>
+                    <p style="color: var(--text-light);">We offer a diverse fleet to suit all skill levels and group sizes.</p>
                 </div>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    <div class="pricing-card">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Basic Paddler</h3>
-                        <div class="season-price">$150<span style="font-size: 1rem; color: var(--text-light); font-weight: 400;">/season</span></div>
-                        <ul style="list-style: none; text-align: left; margin-bottom: 2rem;">
-                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fa-solid fa-check" style="color: #10b981;"></i> 10 Half-Day Rentals</li>
-                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fa-solid fa-check" style="color: #10b981;"></i> Standard Kayaks Only</li>
-                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem; color: var(--text-light);"><i class="fa-solid fa-xmark"></i> No Weekend Priority</li>
-                        </ul>
-                        <a href="#" class="btn btn-outline-dark" style="width: 100%;">Select Basic</a>
+                <div class="rental-grid">
+                    <!-- Solo Kayak -->
+                    <div class="rental-card">
+                        <div class="rental-image">
+                            <img src="https://plus.unsplash.com/premium_photo-1661893427047-16f6ddc173f6?w=600&auto=format&fit=crop" alt="Solo Kayak">
+                            <div class="rental-badge">Popular</div>
+                        </div>
+                        <div class="rental-content">
+                            <h3>Solo Kayak</h3>
+                            <p>Perfect for a morning workout or solitary exploration.</p>
+                            <ul class="rental-features">
+                                <li><i class="fa-solid fa-check"></i> 1 Person</li>
+                                <li><i class="fa-solid fa-check"></i> Life jacket & paddle</li>
+                            </ul>
+                            <div class="rental-footer">
+                                <div class="rental-price"><strong>$25</strong><span>/hr</span></div>
+                                <button class="btn btn-primary" onclick="openBookingModal('Solo Kayak')">Book</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="pricing-card-popular">
-                        <span class="badge badge-primary" style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%);">Most Popular</span>
-                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">River Explorer</h3>
-                        <div class="season-price">$299<span style="font-size: 1rem; color: var(--text-light); font-weight: 400;">/season</span></div>
-                        <ul style="list-style: none; text-align: left; margin-bottom: 2rem;">
-                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fa-solid fa-check" style="color: #10b981;"></i> Unlimited Rentals</li>
-                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fa-solid fa-check" style="color: #10b981;"></i> Access to Entire Fleet</li>
-                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fa-solid fa-check" style="color: #10b981;"></i> Free Guest Pass (1/month)</li>
-                        </ul>
-                        <a href="#" class="btn btn-primary" style="width: 100%;">Select Explorer</a>
+                    <!-- Tandem Kayak -->
+                    <div class="rental-card">
+                        <div class="rental-image">
+                            <img src="https://images.unsplash.com/photo-1653593548856-23fdff295e2d?w=600&auto=format&fit=crop" alt="Tandem Kayak">
+                        </div>
+                        <div class="rental-content">
+                            <h3>Tandem Kayak</h3>
+                            <p>Share the experience with a partner or friend.</p>
+                            <ul class="rental-features">
+                                <li><i class="fa-solid fa-check"></i> 2 People</li>
+                                <li><i class="fa-solid fa-check"></i> Very stable</li>
+                            </ul>
+                            <div class="rental-footer">
+                                <div class="rental-price"><strong>$40</strong><span>/hr</span></div>
+                                <button class="btn btn-primary" onclick="openBookingModal('Tandem Kayak')">Book</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Canoe -->
+                    <div class="rental-card">
+                        <div class="rental-image">
+                            <img src="https://images.unsplash.com/photo-1578186808502-f90323c4f7a1?w=600&auto=format&fit=crop" alt="Canoe">
+                        </div>
+                        <div class="rental-content">
+                            <h3>Classic Canoe</h3>
+                            <p>Spacious enough for the family or packing a picnic.</p>
+                            <ul class="rental-features">
+                                <li><i class="fa-solid fa-check"></i> Up to 3 People</li>
+                                <li><i class="fa-solid fa-check"></i> High capacity</li>
+                            </ul>
+                            <div class="rental-footer">
+                                <div class="rental-price"><strong>$45</strong><span>/hr</span></div>
+                                <button class="btn btn-primary" onclick="openBookingModal('Classic Canoe')">Book</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Paddleboard -->
+                    <div class="rental-card">
+                        <div class="rental-image">
+                            <img src="https://plus.unsplash.com/premium_photo-1676645882020-8387c2c77ef8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8UGFkZGxlYm9hcmR8ZW58MHx8MHx8fDA%3D?w=600&auto=format&fit=crop" alt="Paddleboard">
+                        </div>
+                        <div class="rental-content">
+                            <h3>Paddleboard (SUP)</h3>
+                            <p>Test your balance and enjoy a unique view.</p>
+                            <ul class="rental-features">
+                                <li><i class="fa-solid fa-check"></i> 1 Person</li>
+                                <li><i class="fa-solid fa-check"></i> Core workout</li>
+                            </ul>
+                            <div class="rental-footer">
+                                <div class="rental-price"><strong>$30</strong><span>/hr</span></div>
+                                <button class="btn btn-primary" onclick="openBookingModal('Paddleboard')">Book</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 4: Shuttle Services -->
+        <!-- Section 2: Guided Tours & Group Events -->
+        <section class="tours-section" style="padding: 5rem 0; background-color: var(--bg-color);">
+            <div class="container">
+                <div class="tour-split">
+                    <div class="tour-info">
+                        <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Guided Nature Tours & Group Events</h2>
+                        <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 2rem;">Join our expert local guides for an immersive journey or plan a custom event for your team.</p>
+                        
+                        <div class="tour-feature">
+                            <div class="tour-feature-icon"><i class="fa-solid fa-sun"></i></div>
+                            <div>
+                                <h4>Sunrise & Sunset Tours</h4>
+                                <p>Experience the river at its most beautiful. Small groups ensure a personalized experience.</p>
+                                <div class="tour-price" style="color: var(--primary-color); font-weight: 600;">From $75/person</div>
+                            </div>
+                        </div>
+                        
+                        <div class="tour-feature">
+                            <div class="tour-feature-icon"><i class="fa-solid fa-users"></i></div>
+                            <div>
+                                <h4>Team Building & Corporate</h4>
+                                <p>Customized packages with catered lunch options and dedicated instructors.</p>
+                                <div class="tour-price" style="color: var(--primary-color); font-weight: 600;">Custom Pricing</div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary" style="margin-top: 1.5rem;" onclick="openBookingModal('Guided Tour / Group Event')">Request Tour Info</button>
+                    </div>
+                    <div class="tour-image-grid">
+                        <img src="https://plus.unsplash.com/premium_photo-1718146018997-a1059f9f9420?w=600&auto=format&fit=crop" alt="Tour 1" class="img-main">
+                        <img src="https://images.unsplash.com/photo-1656023646745-b42ae1fecc95?w=600&auto=format&fit=crop" alt="Tour 2" class="img-sub">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Safety Measures -->
+        <section class="safety-section" style="padding: 5rem 0;">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                    <h2>Your Safety is Our Priority</h2>
+                    <p style="color: var(--text-light);">We take every precaution to ensure you have a safe and enjoyable experience on the water.</p>
+                </div>
+                <div class="safety-grid">
+                    <div class="safety-card">
+                        <div class="safety-icon"><i class="fa-solid fa-life-ring"></i></div>
+                        <h4>Premium Equipment</h4>
+                        <p>High-quality life jackets and regularly inspected watercraft for your peace of mind.</p>
+                    </div>
+                    <div class="safety-card">
+                        <div class="safety-icon"><i class="fa-solid fa-user-shield"></i></div>
+                        <h4>Certified Guides</h4>
+                        <p>Our staff are CPR and First Aid certified, with extensive swift-water rescue training.</p>
+                    </div>
+                    <div class="safety-card">
+                        <div class="safety-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+                        <h4>Weather Monitoring</h4>
+                        <p>We constantly monitor river conditions and weather to ensure safe paddling environments.</p>
+                    </div>
+                    <div class="safety-card">
+                        <div class="safety-icon"><i class="fa-solid fa-map-location"></i></div>
+                        <h4>On-Water Orientation</h4>
+                        <p>Every rental includes a comprehensive safety briefing and basic paddling instruction.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Membership Packages -->
+        <section class="membership-section" style="padding: 5rem 0; background-color: var(--bg-color);">
+            <div class="container">
+                <div class="membership-wrapper">
+                    <div class="membership-info-box">
+                        <span class="badge badge-dark" style="margin-bottom: 1rem;">Memberships</span>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Why Become a Member?</h2>
+                        <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 2rem;">For locals and frequent visitors, our season passes offer unbeatable value and exclusive perks.</p>
+                        <ul class="benefits-list">
+                            <li>
+                                <div class="benefit-icon"><i class="fa-solid fa-piggy-bank"></i></div>
+                                <div>
+                                    <strong>Massive Savings</strong>
+                                    <p>Pays for itself after just 4 visits. Enjoy the river all summer long.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="benefit-icon"><i class="fa-solid fa-star"></i></div>
+                                <div>
+                                    <strong>VIP Treatment</strong>
+                                    <p>Skip the regular line, access premium fleet options, and get priority booking.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="benefit-icon"><i class="fa-solid fa-user-group"></i></div>
+                                <div>
+                                    <strong>Bring Friends</strong>
+                                    <p>Higher tier passes include guest passes so you can share the adventure.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="membership-cards">
+                        <div class="pricing-card">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Basic Paddler</h3>
+                            <div class="season-price">$150<span style="font-size: 1rem; color: var(--text-light); font-weight: 400;">/season</span></div>
+                            <ul style="list-style: none; text-align: left; margin-bottom: 2rem;">
+                                <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fa-solid fa-check" style="color: #10b981;"></i> 10 Half-Day Rentals</li>
+                                <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fa-solid fa-check" style="color: #10b981;"></i> Standard Kayaks Only</li>
+                                <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem; color: var(--text-light);"><i class="fa-solid fa-xmark"></i> No Weekend Priority</li>
+                            </ul>
+                            <button class="btn btn-outline-dark" style="width: 100%;" onclick="openBookingModal('Basic Paddler Membership')">Join Now</button>
+                        </div>
+                        <div class="pricing-card-popular">
+                            <span class="badge badge-primary" style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%);">Most Popular</span>
+                            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">River Explorer</h3>
+                            <div class="season-price">$299<span style="font-size: 1rem; color: var(--text-light); font-weight: 400;">/season</span></div>
+                            <ul style="list-style: none; text-align: left; margin-bottom: 2rem;">
+                                <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fa-solid fa-check" style="color: #10b981;"></i> Unlimited Rentals</li>
+                                <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fa-solid fa-check" style="color: #10b981;"></i> Access to Entire Fleet</li>
+                                <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fa-solid fa-check" style="color: #10b981;"></i> Free Guest Pass (1/month)</li>
+                            </ul>
+                            <button class="btn btn-primary" style="width: 100%;" onclick="openBookingModal('River Explorer Membership')">Join Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Shuttle Services -->
         <section class="shuttle-services" style="padding: 5rem 0;">
             <div class="container">
-                <div class="story-grid">
-                    <div style="order: 2;">
-                        <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--text-dark);">One-Way Trip Shuttles</h2>
-                        <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 2rem;">Want to paddle straight down the river without battling the current on the way back? We offer convenient shuttle services to pick you and your equipment up at designated pull-out spots.</p>
-                        <div style="background: var(--bg-color); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--secondary-color);">
-                            <h4 style="margin-bottom: 0.5rem; color: var(--secondary-color);">How it works:</h4>
-                            <p style="margin: 0; font-size: 0.95rem; color: var(--text-light);">Park your car at the Outpost, enjoy a 3 to 8-mile downriver float, and our shuttle van will be waiting at the finish line to drive you back to your vehicle.</p>
+                <div class="shuttle-banner">
+                    <div class="shuttle-content">
+                        <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--white);">One-Way Trip Shuttles</h2>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; margin-bottom: 2rem;">Want to paddle straight down the river without battling the current on the way back? We offer convenient shuttle services.</p>
+                        <div class="shuttle-steps">
+                            <div class="step">
+                                <div class="step-num">1</div>
+                                <span>Park at Outpost</span>
+                            </div>
+                            <div class="step">
+                                <div class="step-num">2</div>
+                                <span>Enjoy 3-8 mile float</span>
+                            </div>
+                            <div class="step">
+                                <div class="step-num">3</div>
+                                <span>Shuttle brings you back</span>
+                            </div>
                         </div>
+                        <button class="btn btn-primary" style="margin-top: 2rem; background: var(--white); color: var(--primary-dark); border: none;" onclick="openBookingModal('Shuttle Service')">Book Shuttle</button>
                     </div>
-                    <div style="order: 1;">
-                        <img src="https://images.unsplash.com/photo-1509749837427-ac94a2553d0e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8T25lLVdheSUyMFRyaXAlMjBTaHV0dGxlc3xlbnwwfHwwfHx8MA%3D%3D=rb-4.0.3" alt="Shuttle Service" style="width: 100%; border-radius: 12px; box-shadow: var(--shadow-md);">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 5: Guided Custom Tours -->
-        <section class="custom-tours" style="padding: 5rem 0; background-color: var(--bg-color);">
-            <div class="container">
-                <div class="story-grid" style="align-items: center;">
-                    <div>
-                        <span class="badge badge-dark" style="margin-bottom: 1rem; display: inline-block;">Custom Experiences</span>
-                        <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Design Your Dream Tour</h2>
-                        <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 2rem;">Whether it's a romantic sunset proposal on the water, a multi-day camping float, or a specialized wildlife photography excursion, our guides will work with you to plan every detail of your private custom expedition.</p>
-                        <ul style="list-style: none; margin-bottom: 2.5rem;">
-                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fa-solid fa-check" style="color: #10b981;"></i> Tailored itineraries and routes</li>
-                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fa-solid fa-check" style="color: #10b981;"></i> Dedicated expert guide</li>
-                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;"><i class="fa-solid fa-check" style="color: #10b981;"></i> Flexible scheduling for your group</li>
-                        </ul>
-                        <a href="contact.html" class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1.1rem;">Talk to a Trip Planner</a>
-                    </div>
-                    <div style="position: relative;">
-                        <img src="https://plus.unsplash.com/premium_photo-1661893427047-16f6ddc173f6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8U3Vuc2V0JTIwS2F5YWslMjBUb3VyfGVufDB8fDB8fHww=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sunset Kayak Tour" style="width: 100%; border-radius: 12px; box-shadow: var(--shadow-md);">
-                        <div class="floating-card" style="bottom: -20px; right: -20px; left: auto; max-width: 200px;">
-                            <i class="fa-solid fa-map-location-dot" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 0.5rem;"></i>
-                        </div>
+                    <div class="shuttle-image">
+                        <img src="https://images.unsplash.com/photo-1509749837427-ac94a2553d0e?w=800&auto=format&fit=crop" alt="Shuttle Service">
                     </div>
                 </div>
             </div>
@@ -251,10 +359,64 @@
                 <div class="cta-content">
                     <h2>Ready for your next adventure?</h2>
                     <p>Reserve your equipment today and ensure a seamless experience at the Riverside.</p>
-                    <a href="#" class="btn btn-secondary">Check Availability</a>
+                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
                 </div>
             </div>
         </section>
+
+        <!-- Booking Modal -->
+        <div id="bookingModal" class="modal-overlay">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3 id="modalTitle">Book Your Adventure</h3>
+                    <button class="close-modal" onclick="closeBookingModal()"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="modal-body">
+                    <form id="bookingForm" onsubmit="event.preventDefault(); submitBooking();">
+                        <input type="hidden" id="selectedService" name="service">
+                        
+                        <div class="form-group">
+                            <label for="bookingName">Full Name</label>
+                            <input type="text" id="bookingName" required placeholder="John Doe">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="bookingEmail">Email Address</label>
+                            <input type="email" id="bookingEmail" required placeholder="john@example.com">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group" id="dateGroup">
+                                <label for="bookingDate">Date</label>
+                                <input type="date" id="bookingDate" required>
+                            </div>
+                            <div class="form-group" id="guestsGroup">
+                                <label for="bookingGuests">Number of People</label>
+                                <input type="number" id="bookingGuests" min="1" value="1" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="membershipNotes" style="display: none;">
+                            <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 1rem; padding: 1rem; background: var(--bg-color); border-radius: 8px; border-left: 4px solid var(--primary-color);">Your season pass will be valid for 1 year from the date of purchase. Our team will contact you to complete payment.</p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="bookingNotes">Special Requests / Notes</label>
+                            <textarea id="bookingNotes" rows="3" placeholder="Any special requirements?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Booking</button>
+                    </form>
+                    
+                    <div id="bookingSuccess" style="display: none; text-align: center; padding: 2rem 0;">
+                        <i class="fa-solid fa-circle-check" style="font-size: 4rem; color: #10b981; margin-bottom: 1rem;"></i>
+                        <h3>Request Received!</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem;">We'll be in touch shortly to confirm your reservation.</p>
+                        <button class="btn btn-outline-dark" onclick="closeBookingModal()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -262,8 +424,12 @@
         <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
             <div>
                 <a href="index.html" class="logo" style="color: var(--white); margin-bottom: 1rem; display: inline-flex;">
-                    <i class="fa-solid fa-water"></i>
-                    Riverside
+                    <svg class="brand-icon" viewBox="0 0 40 40" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;">
+        <path d="M2 25 Q 10 15, 20 25 T 38 25" />
+        <path d="M6 32 Q 14 22, 20 32 T 34 32" />
+        <path d="M20 5 L 12 18 H 28 Z" fill="currentColor" stroke="none" />
+    </svg>
+    <span style="font-family: 'Outfit', sans-serif; font-weight: 700; letter-spacing: -0.5px;">Riverside</span>
                 </a>
                 <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">Your premier destination for kayak and canoe rentals. Experience the beauty of the river with our top-quality equipment and expert guides.</p>
                 <div style="display: flex; gap: 1rem;">
@@ -278,6 +444,8 @@
                 <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
                     <li><a href="about.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">About Us</a></li>
                     <li><a href="services.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Our Services</a></li>
+                    <li><a href="rentals.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Rentals</a></li>
+                    <li><a href="gallery.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Gallery</a></li>
                     <li><a href="home2.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Group Events</a></li>
                     <li><a href="contact.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Contact Us</a></li>
                 </ul>

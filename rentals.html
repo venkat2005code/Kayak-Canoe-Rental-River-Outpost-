@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentals | Riverside</title>
+    <meta name="description" content="Detailed information on our kayak and canoe rental fleet, what's included, and how to prepare for your trip.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <svg class="brand-icon" viewBox="0 0 40 40" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;">
+        <path d="M2 25 Q 10 15, 20 25 T 38 25" />
+        <path d="M6 32 Q 14 22, 20 32 T 34 32" />
+        <path d="M20 5 L 12 18 H 28 Z" fill="currentColor" stroke="none" />
+    </svg>
+    <span style="font-family: 'Outfit', sans-serif; font-weight: 700; letter-spacing: -0.5px;">Riverside</span>
+            </a>
+
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li class="nav-item has-dropdown">
+                        <a href="index.html" class="nav-link">Home <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html" class="dropdown-link">Home 1</a></li>
+                            <li><a href="home2.html" class="dropdown-link">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="rentals.html" class="nav-link active">Rentals</a></li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Dashboard <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="user-dashboard.html" class="dropdown-link">User Dashboard</a></li>
+                            <li><a href="admin-dashboard.html" class="dropdown-link">Admin Dashboard</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button id="theme-toggle-btn" class="icon-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="lang-toggle" class="icon-btn" aria-label="Toggle LTR/RTL">
+                    <i class="fa-solid fa-globe"></i>
+                </button>
+                <button class="menu-btn" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <a href="login.html" class="btn btn-primary nav-login-btn">Sign In</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+        <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <ul class="mobile-dropdown">
+                    <li><a href="index.html" class="mobile-dropdown-link">Home 1</a></li>
+                    <li><a href="home2.html" class="mobile-dropdown-link">Home 2</a></li>
+                </ul>
+            </li>
+            <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About</a></li>
+            <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+            <li class="mobile-nav-item"><a href="rentals.html" class="mobile-nav-link">Rentals</a></li>
+            <li class="mobile-nav-item"><a href="gallery.html" class="mobile-nav-link">Gallery</a></li>
+            <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+            <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">Dashboard</a>
+                <ul class="mobile-dropdown">
+                    <li><a href="user-dashboard.html" class="mobile-dropdown-link">User Dashboard</a></li>
+                    <li><a href="admin-dashboard.html" class="mobile-dropdown-link">Admin Dashboard</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="mobile-nav-cta">
+            <a href="login.html" class="btn btn-primary"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="page-header-bg">
+                <img src="https://images.unsplash.com/photo-1619127076035-ffae719099a8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8UGFkZGxlYm9hcmQlMjByZW50YWx8ZW58MHx8MHx8fDA%3D?w=1920&auto=format&fit=crop&q=80"
+                    alt="Kayaks lined up">
+                <div class="page-header-overlay"></div>
+            </div>
+            <div class="container page-header-content">
+                <h1>Equipment Rentals</h1>
+                <p>Everything you need to know about our fleet and preparing for your trip.</p>
+            </div>
+        </section>
+
+        <!-- Our Fleet Section -->
+        <section class="rentals-section" style="padding: 5rem 0;">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                    <span class="badge badge-primary">Our Fleet</span>
+                    <h2>Choose Your Watercraft</h2>
+                    <p style="color: var(--text-light);">We maintain top-quality equipment suitable for all experience levels.</p>
+                </div>
+                
+                <div class="rental-grid">
+                    <!-- Solo Kayak Detailed -->
+                    <div class="rental-card">
+                        <div class="rental-image">
+                            <img src="https://images.unsplash.com/photo-1551158025-3d352d73a030?w=600&auto=format&fit=crop" alt="Solo Kayak">
+                        </div>
+                        <div class="rental-content">
+                            <h3 style="margin-bottom: 1rem;">Solo Kayak (Sit-on-Top)</h3>
+                            <p>Our most popular option. Extremely stable and easy to maneuver, perfect for beginners and experienced paddlers alike.</p>
+                            
+                            <div class="fleet-specs" style="background: var(--bg-color); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; gap: 1rem;">
+                                    <span style="color: var(--text-light); white-space: nowrap;"><i class="fa-solid fa-weight-scale"></i> Capacity:</span>
+                                    <strong style="text-align: right;">275 lbs</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; gap: 1rem;">
+                                    <span style="color: var(--text-light); white-space: nowrap;"><i class="fa-solid fa-star"></i> Skill Level:</span>
+                                    <strong style="text-align: right;">Beginner</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+                                    <span style="color: var(--text-light); white-space: nowrap;"><i class="fa-solid fa-dog"></i> Pet Friendly:</span>
+                                    <strong style="text-align: right;">Small</strong>
+                                </div>
+                            </div>
+                            
+                            <div class="fleet-pricing" style="margin-bottom: 1.5rem;">
+                                <div style="display: flex; justify-content: space-between; padding-bottom: 0.5rem; border-bottom: 1px solid var(--glass-border);">
+                                    <span>2 Hours</span> <strong style="text-align: right;">$35</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--glass-border);">
+                                    <span>Half Day (4h)</span> <strong style="text-align: right;">$55</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; padding-top: 0.5rem;">
+                                    <span>Full Day</span> <strong style="text-align: right;">$75</strong>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary" style="width: 100%;" onclick="openBookingModal('Solo Kayak')">Book Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Tandem Kayak Detailed -->
+                    <div class="rental-card">
+                        <div class="rental-image">
+                            <img src="https://images.unsplash.com/photo-1509749837427-ac94a2553d0e?w=600&auto=format&fit=crop" alt="Tandem Kayak">
+                        </div>
+                        <div class="rental-content">
+                            <h3 style="margin-bottom: 1rem;">Tandem Kayak</h3>
+                            <p>Share the paddling load! Great for couples, friends, or a parent with a child. Very stable double kayak.</p>
+                            
+                            <div class="fleet-specs" style="background: var(--bg-color); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; gap: 1rem;">
+                                    <span style="color: var(--text-light); white-space: nowrap;"><i class="fa-solid fa-weight-scale"></i> Capacity:</span>
+                                    <strong style="text-align: right;">500 lbs</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; gap: 1rem;">
+                                    <span style="color: var(--text-light); white-space: nowrap;"><i class="fa-solid fa-star"></i> Skill Level:</span>
+                                    <strong style="text-align: right;">Beginner</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+                                    <span style="color: var(--text-light); white-space: nowrap;"><i class="fa-solid fa-dog"></i> Pet Friendly:</span>
+                                    <strong style="text-align: right;">Yes</strong>
+                                </div>
+                            </div>
+                            
+                            <div class="fleet-pricing" style="margin-bottom: 1.5rem;">
+                                <div style="display: flex; justify-content: space-between; padding-bottom: 0.5rem; border-bottom: 1px solid var(--glass-border);">
+                                    <span>2 Hours</span> <strong style="text-align: right;">$55</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--glass-border);">
+                                    <span>Half Day (4h)</span> <strong style="text-align: right;">$75</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; padding-top: 0.5rem;">
+                                    <span>Full Day</span> <strong style="text-align: right;">$95</strong>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary" style="width: 100%;" onclick="openBookingModal('Tandem Kayak')">Book Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Canoe Detailed -->
+                    <div class="rental-card">
+                        <div class="rental-image">
+                            <img src="https://plus.unsplash.com/premium_photo-1683121215455-cbdaf9adf0af?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDM2fHx8ZW58MHx8fHx8?w=600&auto=format&fit=crop" alt="Canoe">
+                        </div>
+                        <div class="rental-content">
+                            <h3 style="margin-bottom: 1rem;">Classic Canoe</h3>
+                            <p>The traditional river experience. Perfect for families, bringing lots of gear, or packing a large picnic.</p>
+                            
+                            <div class="fleet-specs" style="background: var(--bg-color); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; gap: 1rem;">
+                                    <span style="color: var(--text-light); white-space: nowrap;"><i class="fa-solid fa-weight-scale"></i> Capacity:</span>
+                                    <strong style="text-align: right;">800 lbs </strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; gap: 1rem;">
+                                    <span style="color: var(--text-light); white-space: nowrap;"><i class="fa-solid fa-star"></i> Skill Level:</span>
+                                    <strong style="text-align: right;">Intermediate</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+                                    <span style="color: var(--text-light); white-space: nowrap;"><i class="fa-solid fa-dog"></i> Pet Friendly:</span>
+                                    <strong style="text-align: right;">Yes</strong>
+                                </div>
+                            </div>
+                            
+                            <div class="fleet-pricing" style="margin-bottom: 1.5rem;">
+                                <div style="display: flex; justify-content: space-between; padding-bottom: 0.5rem; border-bottom: 1px solid var(--glass-border);">
+                                    <span>2 Hours</span> <strong style="text-align: right;">$60</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--glass-border);">
+                                    <span>Half Day (4h)</span> <strong style="text-align: right;">$80</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; padding-top: 0.5rem;">
+                                    <span>Full Day</span> <strong style="text-align: right;">$100</strong>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary" style="width: 100%;" onclick="openBookingModal('Classic Canoe')">Book Now</button>
+                        </div>
+                    </div>
+
+                    <!-- SUP Detailed -->
+                    <div class="rental-card">
+                        <div class="rental-image">
+                            <img src="https://images.unsplash.com/photo-1598318970903-d9d5d7dad0c2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8U3RhbmQtVXAlMjBQYWRkbGVib2FyZHxlbnwwfHwwfHx8MA%3D%3D?w=600&auto=format&fit=crop" alt="Paddleboard">
+                        </div>
+                        <div class="rental-content">
+                            <h3 style="margin-bottom: 1rem;">Stand-Up Paddleboard</h3>
+                            <p>Get a full-body workout and a unique vantage point on the water. Great for calm days on the river.</p>
+                            
+                            <div class="fleet-specs" style="background: var(--bg-color); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; gap: 1rem;">
+                                    <span style="color: var(--text-light); white-space: nowrap;"><i class="fa-solid fa-weight-scale"></i> Capacity:</span>
+                                    <strong style="text-align: right;">250 lbs</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; gap: 1rem;">
+                                    <span style="color: var(--text-light); white-space: nowrap;"><i class="fa-solid fa-star"></i> Skill Level:</span>
+                                    <strong style="text-align: right;">Intermediate</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+                                    <span style="color: var(--text-light); white-space: nowrap;"><i class="fa-solid fa-dog"></i> Pet Friendly:</span>
+                                    <strong style="text-align: right;">No</strong>
+                                </div>
+                            </div>
+                            
+                            <div class="fleet-pricing" style="margin-bottom: 1.5rem;">
+                                <div style="display: flex; justify-content: space-between; padding-bottom: 0.5rem; border-bottom: 1px solid var(--glass-border);">
+                                    <span>2 Hours</span> <strong style="text-align: right;">$40</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--glass-border);">
+                                    <span>Half Day (4h)</span> <strong style="text-align: right;">$60</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; padding-top: 0.5rem;">
+                                    <span>Full Day</span> <strong style="text-align: right;">$80</strong>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary" style="width: 100%;" onclick="openBookingModal('Paddleboard')">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipment Included Section -->
+        <section class="equipment-included" style="padding: 5rem 0; background-color: var(--bg-color);">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                    <h2>What's Included With Every Rental</h2>
+                    <p style="color: var(--text-light);">We provide all the essentials so you can focus on enjoying the water.</p>
+                </div>
+                
+                <div class="equipment-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem;">
+                    <div class="equipment-item" style="text-align: center; padding: 2rem; background: var(--card-bg); border-radius: 16px; border: 1px solid var(--glass-border);">
+                        <div class="equipment-icon" style="width: 64px; height: 64px; margin: 0 auto 1.5rem; background: rgba(16, 185, 129, 0.1); color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem;"><i class="fa-solid fa-vest"></i></div>
+                        <h4>Life Jackets (PFD)</h4>
+                        <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 0.5rem;">Coast Guard-approved, properly sized life jackets for adults and children. Required to be worn at all times.</p>
+                    </div>
+                    <div class="equipment-item" style="text-align: center; padding: 2rem; background: var(--card-bg); border-radius: 16px; border: 1px solid var(--glass-border);">
+                        <div class="equipment-icon" style="width: 64px; height: 64px; margin: 0 auto 1.5rem; background: rgba(16, 185, 129, 0.1); color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem;"><i class="fa-solid fa-anchor"></i></div>
+                        <h4>Premium Paddles</h4>
+                        <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 0.5rem;">Lightweight, size-appropriate paddles designed for efficiency and comfort on the water.</p>
+                    </div>
+                    <div class="equipment-item" style="text-align: center; padding: 2rem; background: var(--card-bg); border-radius: 16px; border: 1px solid var(--glass-border);">
+                        <div class="equipment-icon" style="width: 64px; height: 64px; margin: 0 auto 1.5rem; background: rgba(16, 185, 129, 0.1); color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem;"><i class="fa-solid fa-map-location-dot"></i></div>
+                        <h4>River Maps</h4>
+                        <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 0.5rem;">Detailed waterproof maps showing landmarks, rest stops, and pull-out locations.</p>
+                    </div>
+                    <div class="equipment-item" style="text-align: center; padding: 2rem; background: var(--card-bg); border-radius: 16px; border: 1px solid var(--glass-border);">
+                        <div class="equipment-icon" style="width: 64px; height: 64px; margin: 0 auto 1.5rem; background: rgba(16, 185, 129, 0.1); color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem;"><i class="fa-solid fa-person-chalkboard"></i></div>
+                        <h4>Safety Briefing</h4>
+                        <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 0.5rem;">A comprehensive overview of river conditions, paddling basics, and safety protocols before you launch.</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 3rem;">
+                    <p style="color: var(--text-light); font-size: 0.95rem;"><em>* Dry bags and waterproof phone cases are available for purchase or small rental fee at the outpost.</em></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Before You Go Checklist -->
+        <section class="checklist-section" style="padding: 5rem 0;">
+            <div class="container">
+                <div class="checklist-wrapper" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: center;">
+                    <div class="checklist-image" style="order: 2;">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&auto=format&fit=crop" alt="Preparing for kayak trip" style="width: 100%; border-radius: 16px; box-shadow: var(--shadow-md);">
+                    </div>
+                    <div class="checklist-content" style="order: 1;">
+                        <span class="badge badge-primary" style="margin-bottom: 1rem;">Preparation</span>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Before You Go Checklist</h2>
+                        <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 2rem;">Ensure you have a comfortable and safe trip by coming prepared.</p>
+                        
+                        <div class="checklist-groups">
+                            <div class="checklist-group" style="margin-bottom: 2rem;">
+                                <h4 style="font-size: 1.25rem; margin-bottom: 1rem; display: flex; align-items: center;"><i class="fa-solid fa-shirt" style="color: var(--primary-color); margin-right: 0.75rem; font-size: 1.5rem;"></i> What to Wear</h4>
+                                <ul style="list-style: none;">
+                                    <li style="margin-bottom: 0.5rem; color: var(--text-light); display: flex; align-items: center; gap: 0.5rem;"><i class="fa-regular fa-circle-check" style="color: #10b981;"></i> Quick-dry clothing (avoid cotton/jeans)</li>
+                                    <li style="margin-bottom: 0.5rem; color: var(--text-light); display: flex; align-items: center; gap: 0.5rem;"><i class="fa-regular fa-circle-check" style="color: #10b981;"></i> Water shoes or secure sandals (no flip-flops)</li>
+                                    <li style="margin-bottom: 0.5rem; color: var(--text-light); display: flex; align-items: center; gap: 0.5rem;"><i class="fa-regular fa-circle-check" style="color: #10b981;"></i> Hat or visor for sun protection</li>
+                                    <li style="margin-bottom: 0.5rem; color: var(--text-light); display: flex; align-items: center; gap: 0.5rem;"><i class="fa-regular fa-circle-check" style="color: #10b981;"></i> Sunglasses (with a strap!)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="checklist-group" style="margin-bottom: 2rem;">
+                                <h4 style="font-size: 1.25rem; margin-bottom: 1rem; display: flex; align-items: center;"><i class="fa-solid fa-bag-shopping" style="color: var(--primary-color); margin-right: 0.75rem; font-size: 1.5rem;"></i> What to Bring</h4>
+                                <ul style="list-style: none;">
+                                    <li style="margin-bottom: 0.5rem; color: var(--text-light); display: flex; align-items: center; gap: 0.5rem;"><i class="fa-regular fa-circle-check" style="color: #10b981;"></i> Sunscreen and lip balm</li>
+                                    <li style="margin-bottom: 0.5rem; color: var(--text-light); display: flex; align-items: center; gap: 0.5rem;"><i class="fa-regular fa-circle-check" style="color: #10b981;"></i> Plenty of drinking water</li>
+                                    <li style="margin-bottom: 0.5rem; color: var(--text-light); display: flex; align-items: center; gap: 0.5rem;"><i class="fa-regular fa-circle-check" style="color: #10b981;"></i> Snacks in a waterproof container</li>
+                                    <li style="margin-bottom: 0.5rem; color: var(--text-light); display: flex; align-items: center; gap: 0.5rem;"><i class="fa-regular fa-circle-check" style="color: #10b981;"></i> Change of clothes/towel for after</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="checklist-group">
+                                <h4 style="font-size: 1.25rem; margin-bottom: 1rem; display: flex; align-items: center;"><i class="fa-solid fa-clipboard-list" style="color: var(--primary-color); margin-right: 0.75rem; font-size: 1.5rem;"></i> Requirements</h4>
+                                <ul style="list-style: none; background: var(--bg-color); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--accent-color);">
+                                    <li style="margin-bottom: 0.5rem; color: var(--text-dark); display: flex; align-items: flex-start; gap: 0.5rem;"><i class="fa-solid fa-triangle-exclamation" style="color: var(--accent-color); margin-top: 0.2rem;"></i> <span>Arrive <strong style="text-align: right;">15 minutes early</strong> for your reservation</span></li>
+                                    <li style="margin-bottom: 0.5rem; color: var(--text-dark); display: flex; align-items: flex-start; gap: 0.5rem;"><i class="fa-solid fa-triangle-exclamation" style="color: var(--accent-color); margin-top: 0.2rem;"></i> <span>All renters must sign a liability waiver</span></li>
+                                    <li style="margin-bottom: 0; color: var(--text-dark); display: flex; align-items: flex-start; gap: 0.5rem;"><i class="fa-solid fa-triangle-exclamation" style="color: var(--accent-color); margin-top: 0.2rem;"></i> <span>Children under 12 must ride in a tandem with an adult</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Modal -->
+        <div id="bookingModal" class="modal-overlay">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3 id="modalTitle">Book Your Adventure</h3>
+                    <button class="close-modal" onclick="closeBookingModal()"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="modal-body">
+                    <form id="bookingForm" onsubmit="event.preventDefault(); submitBooking();">
+                        <input type="hidden" id="selectedService" name="service">
+                        
+                        <div class="form-group">
+                            <label for="bookingName">Full Name</label>
+                            <input type="text" id="bookingName" required placeholder="John Doe">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="bookingEmail">Email Address</label>
+                            <input type="email" id="bookingEmail" required placeholder="john@example.com">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group" id="dateGroup">
+                                <label for="bookingDate">Date</label>
+                                <input type="date" id="bookingDate" required>
+                            </div>
+                            <div class="form-group" id="guestsGroup">
+                                <label for="bookingGuests">Quantity</label>
+                                <input type="number" id="bookingGuests" min="1" value="1" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="membershipNotes" style="display: none;">
+                            <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 1rem; padding: 1rem; background: var(--bg-color); border-radius: 8px; border-left: 4px solid var(--primary-color);">Your season pass will be valid for 1 year from the date of purchase. Our team will contact you to complete payment.</p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="bookingNotes">Duration / Notes</label>
+                            <textarea id="bookingNotes" rows="2" placeholder="E.g., 2 Hours, Half Day..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Booking</button>
+                    </form>
+                    
+                    <div id="bookingSuccess" style="display: none; text-align: center; padding: 2rem 0;">
+                        <i class="fa-solid fa-circle-check" style="font-size: 4rem; color: #10b981; margin-bottom: 1rem;"></i>
+                        <h3>Request Received!</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem;">We'll be in touch shortly to confirm your reservation.</p>
+                        <button class="btn btn-outline-dark" onclick="closeBookingModal()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background-color: var(--primary-dark); color: var(--white); padding: 4rem 0 2rem; margin-top: auto;">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+            <div>
+                <a href="index.html" class="logo" style="color: var(--white); margin-bottom: 1rem; display: inline-flex;">
+                    <svg class="brand-icon" viewBox="0 0 40 40" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;">
+        <path d="M2 25 Q 10 15, 20 25 T 38 25" />
+        <path d="M6 32 Q 14 22, 20 32 T 34 32" />
+        <path d="M20 5 L 12 18 H 28 Z" fill="currentColor" stroke="none" />
+    </svg>
+    <span style="font-family: 'Outfit', sans-serif; font-weight: 700; letter-spacing: -0.5px;">Riverside</span>
+                </a>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">Your premier destination for kayak and canoe rentals. Experience the beauty of the river with our top-quality equipment and expert guides.</p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#" style="color: var(--white); width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; transition: all 0.3s;"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" style="color: var(--white); width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; transition: all 0.3s;"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" style="color: var(--white); width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; transition: all 0.3s;"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 style="font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--white);">Quick Links</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+                    <li><a href="about.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">About Us</a></li>
+                    <li><a href="services.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Our Services</a></li>
+                    <li><a href="rentals.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Rentals</a></li>
+                    <li><a href="gallery.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Gallery</a></li>
+                    <li><a href="contact.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 style="font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--white);">Contact Info</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem;">
+                    <li style="display: flex; gap: 1rem; color: rgba(255,255,255,0.7); align-items: flex-start;">
+                        <i class="fa-solid fa-location-dot" style="margin-top: 0.3rem; color: var(--accent-color);"></i>
+                        <span>123 Riverfront Way<br>Adventure City, AC 90210</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; color: rgba(255,255,255,0.7); align-items: center;">
+                        <i class="fa-solid fa-phone" style="color: var(--accent-color);"></i>
+                        <span>(555) 123-4567</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; color: rgba(255,255,255,0.7); align-items: center;">
+                        <i class="fa-solid fa-envelope" style="color: var(--accent-color);"></i>
+                        <span>hello@riveroutpost.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center; color: rgba(255,255,255,0.5); font-size: 0.9rem;">
+            <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+                <p style="margin: 0;">&copy; 2023 Riverside. All rights reserved.</p>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none;">Privacy Policy</a>
+                    <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none;">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

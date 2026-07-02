@@ -19,8 +19,12 @@
     <header class="header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <i class="fa-solid fa-water"></i>
-                Riverside
+                <svg class="brand-icon" viewBox="0 0 40 40" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;">
+        <path d="M2 25 Q 10 15, 20 25 T 38 25" />
+        <path d="M6 32 Q 14 22, 20 32 T 34 32" />
+        <path d="M20 5 L 12 18 H 28 Z" fill="currentColor" stroke="none" />
+    </svg>
+    <span style="font-family: 'Outfit', sans-serif; font-weight: 700; letter-spacing: -0.5px;">Riverside</span>
             </a>
 
             <nav class="navbar">
@@ -34,6 +38,8 @@
                     </li>
                     <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="rentals.html" class="nav-link">Rentals</a></li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
                     <li class="nav-item has-dropdown">
                         <a href="#" class="nav-link">Dashboard <i class="fa-solid fa-chevron-down"></i></a>
@@ -46,7 +52,6 @@
             </nav>
 
             <div class="header-actions">
-                <a href="login.html" class="btn btn-primary nav-login-btn">Sign In</a>
                 <button id="theme-toggle-btn" class="icon-btn" aria-label="Toggle Theme">
                     <i class="fa-solid fa-moon"></i>
                 </button>
@@ -56,6 +61,7 @@
                 <button class="menu-btn" aria-label="Open menu">
                     <i class="fa-solid fa-bars"></i>
                 </button>
+                <a href="login.html" class="btn btn-primary nav-login-btn">Sign In</a>
             </div>
         </div>
     </header>
@@ -72,6 +78,8 @@
             </li>
             <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About</a></li>
             <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+            <li class="mobile-nav-item"><a href="rentals.html" class="mobile-nav-link">Rentals</a></li>
+            <li class="mobile-nav-item"><a href="gallery.html" class="mobile-nav-link">Gallery</a></li>
             <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
             <li class="mobile-nav-item">
                 <a href="#" class="mobile-nav-link">Dashboard</a>
@@ -145,19 +153,19 @@
                         <i class="fa-solid fa-sailboat" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
                         <h3 style="margin-bottom: 0.5rem;">Single Kayaks</h3>
                         <p style="color: var(--text-light); margin-bottom: 1rem; font-size: 0.9rem;">Fast, agile, and perfect for solo explorers navigating tight channels.</p>
-                        <a href="#" class="btn btn-secondary" style="width: 100%;">View Details</a>
+                        <a href="#" class="btn btn-outline-dark" style="width: 100%;">View Details</a>
                     </div>
                     <div class="feature-card" style="padding: 2rem; border-radius: 12px; border: 1px solid var(--glass-border); text-align: center;">
                         <i class="fa-solid fa-ship" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
                         <h3 style="margin-bottom: 0.5rem;">Tandem Canoes</h3>
                         <p style="color: var(--text-light); margin-bottom: 1rem; font-size: 0.9rem;">Spacious and stable, ideal for couples or families bringing a cooler along.</p>
-                        <a href="#" class="btn btn-secondary" style="width: 100%;">View Details</a>
+                        <a href="#" class="btn btn-outline-dark" style="width: 100%;">View Details</a>
                     </div>
                     <div class="feature-card" style="padding: 2rem; border-radius: 12px; border: 1px solid var(--glass-border); text-align: center;">
                         <i class="fa-solid fa-water" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
                         <h3 style="margin-bottom: 0.5rem;">Paddleboards</h3>
                         <p style="color: var(--text-light); margin-bottom: 1rem; font-size: 0.9rem;">Experience the river from a new perspective with our stable SUPs.</p>
-                        <a href="#" class="btn btn-secondary" style="width: 100%;">View Details</a>
+                        <a href="#" class="btn btn-outline-dark" style="width: 100%;">View Details</a>
                     </div>
                 </div>
             </div>
@@ -175,10 +183,10 @@
                         <div style="height: 200px; background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;"></div>
                         <div style="padding: 1.5rem;">
                             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                                <h3 style="font-size: 1.25rem;">The Whispering Bend</h3>
+                                <h3 style="font-size: 1.25rem; margin: 0;">The Whispering Bend</h3>
                                 <span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">Beginner</span>
                             </div>
-                            <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 1rem;">A gentle 3-mile loop featuring calm waters, perfect for bird watching and families.</p>
+                            <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 1rem; margin-top: 0.5rem;">A gentle 3-mile loop featuring calm waters, perfect for bird watching and families.</p>
                             <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: var(--text-light);">
                                 <span><i class="fa-solid fa-clock"></i> 2 Hours</span>
                                 <span><i class="fa-solid fa-route"></i> 3 Miles</span>
@@ -186,13 +194,13 @@
                         </div>
                     </div>
                     <div style="border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.3s; background: var(--bg-color);">
-                        <div style="height: 200px; background: url('https://images.unsplash.com/photo-1544198365-f5d60b6d8190?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;"></div>
+                        <div style="height: 200px; background: url('https://images.unsplash.com/photo-1534008897995-27a23e859048?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;"></div>
                         <div style="padding: 1.5rem;">
                             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                                <h3 style="font-size: 1.25rem;">Canyon Rapids</h3>
+                                <h3 style="font-size: 1.25rem; margin: 0;">Canyon Rapids</h3>
                                 <span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">Advanced</span>
                             </div>
-                            <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 1rem;">Navigate through thrilling class II rapids and stunning steep rock formations.</p>
+                            <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 1rem; margin-top: 0.5rem;">Navigate through thrilling class II rapids and stunning steep rock formations.</p>
                             <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: var(--text-light);">
                                 <span><i class="fa-solid fa-clock"></i> 4 Hours</span>
                                 <span><i class="fa-solid fa-route"></i> 8 Miles</span>
@@ -217,9 +225,9 @@
                         </div>
                         <p style="font-style: italic; color: var(--text-dark); margin-bottom: 1.5rem;">"The equipment was pristine and the staff made sure we knew exactly where we were going. An unforgettable weekend on the river!"</p>
                         <div style="display: flex; align-items: center; gap: 1rem;">
-                            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">JD</div>
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Jane Doe" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
                             <div>
-                                <h4 style="font-size: 1rem; margin: 0;">Jane Doe</h4>
+                                <h4 style="font-size: 1rem; margin: 0; color: var(--text-dark);">Jane Doe</h4>
                                 <span style="font-size: 0.8rem; color: var(--text-light);">Weekend Explorer</span>
                             </div>
                         </div>
@@ -230,9 +238,9 @@
                         </div>
                         <p style="font-style: italic; color: var(--text-dark); margin-bottom: 1.5rem;">"We booked a corporate outing and it went flawlessly. The guided tour was both educational and incredibly relaxing."</p>
                         <div style="display: flex; align-items: center; gap: 1rem;">
-                            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--secondary-color); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">MR</div>
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Mike Richards" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
                             <div>
-                                <h4 style="font-size: 1rem; margin: 0;">Mike Richards</h4>
+                                <h4 style="font-size: 1rem; margin: 0; color: var(--text-dark);">Mike Richards</h4>
                                 <span style="font-size: 0.8rem; color: var(--text-light);">Corporate Client</span>
                             </div>
                         </div>
@@ -256,8 +264,12 @@
         <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
             <div>
                 <a href="index.html" class="logo" style="color: var(--white); margin-bottom: 1rem; display: inline-flex;">
-                    <i class="fa-solid fa-water"></i>
-                    Riverside
+                    <svg class="brand-icon" viewBox="0 0 40 40" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;">
+        <path d="M2 25 Q 10 15, 20 25 T 38 25" />
+        <path d="M6 32 Q 14 22, 20 32 T 34 32" />
+        <path d="M20 5 L 12 18 H 28 Z" fill="currentColor" stroke="none" />
+    </svg>
+    <span style="font-family: 'Outfit', sans-serif; font-weight: 700; letter-spacing: -0.5px;">Riverside</span>
                 </a>
                 <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">Your premier destination for kayak and canoe rentals. Experience the beauty of the river with our top-quality equipment and expert guides.</p>
                 <div style="display: flex; gap: 1rem;">
@@ -272,6 +284,8 @@
                 <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
                     <li><a href="about.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">About Us</a></li>
                     <li><a href="services.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Our Services</a></li>
+                    <li><a href="rentals.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Rentals</a></li>
+                    <li><a href="gallery.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Gallery</a></li>
                     <li><a href="home2.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Group Events</a></li>
                     <li><a href="contact.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Contact Us</a></li>
                 </ul>

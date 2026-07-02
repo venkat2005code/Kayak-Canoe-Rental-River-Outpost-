@@ -284,3 +284,61 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// --- Booking Modal Logic ---
+window.openBookingModal = function(serviceName) {
+    const modal = document.getElementById('bookingModal');
+    const title = document.getElementById('modalTitle');
+    const selectedServiceInput = document.getElementById('selectedService');
+    const form = document.getElementById('bookingForm');
+    const successMsg = document.getElementById('bookingSuccess');
+    
+    // Reset form state
+    form.style.display = 'block';
+    successMsg.style.display = 'none';
+    form.reset();
+    
+    // Set service info
+    title.textContent = `Book ${serviceName}`;
+    selectedServiceInput.value = serviceName;
+    
+    // Toggle relevant fields based on service type
+    const isMembership = serviceName.includes('Membership');
+    const dateGroup = document.getElementById('dateGroup');
+    const guestsGroup = document.getElementById('guestsGroup');
+    const membershipNotes = document.getElementById('membershipNotes');
+    
+    if (isMembership) {
+        if(dateGroup) dateGroup.style.display = 'none';
+        if(guestsGroup) guestsGroup.style.display = 'none';
+        if(membershipNotes) membershipNotes.style.display = 'block';
+    } else {
+        if(dateGroup) dateGroup.style.display = 'block';
+        if(guestsGroup) guestsGroup.style.display = 'block';
+        if(membershipNotes) membershipNotes.style.display = 'none';
+    }
+    
+    // Open modal
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+};
+
+window.closeBookingModal = function() {
+    const modal = document.getElementById('bookingModal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+};
+
+window.submitBooking = function() {
+    const form = document.getElementById('bookingForm');
+    const successMsg = document.getElementById('bookingSuccess');
+    
+    // Here you would normally send the data to a server
+    // For now, just show success message
+    form.style.display = 'none';
+    successMsg.style.display = 'block';
+};

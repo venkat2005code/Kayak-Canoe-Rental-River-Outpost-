@@ -18,20 +18,26 @@
     <!-- Full-screen Expedition Layout -->
     <div class="expedition-auth-page" style="background-image: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
         
+        <!-- Action Toggles -->
+        <div class="auth-toggles">
+            <button id="theme-toggle-btn" class="icon-btn auth-toggle-btn" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <button id="lang-toggle" class="icon-btn auth-toggle-btn" aria-label="Toggle LTR/RTL">
+                <i class="fa-solid fa-language"></i>
+            </button>
+        </div>
+        
         <!-- Glassmorphic Panel -->
         <div class="expedition-auth-panel">
-            <!-- Action Toggles -->
-            <div class="auth-toggles">
-                <button id="theme-toggle-btn" class="icon-btn auth-toggle-btn" aria-label="Toggle Theme">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
-                <button id="lang-toggle" class="icon-btn auth-toggle-btn" aria-label="Toggle LTR/RTL">
-                    <i class="fa-solid fa-language"></i>
-                </button>
-            </div>
 
             <a href="index.html" class="expedition-auth-logo">
-                <i class="fa-solid fa-water"></i> Riverside
+                <svg class="brand-icon" viewBox="0 0 40 40" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;">
+        <path d="M2 25 Q 10 15, 20 25 T 38 25" />
+        <path d="M6 32 Q 14 22, 20 32 T 34 32" />
+        <path d="M20 5 L 12 18 H 28 Z" fill="currentColor" stroke="none" />
+    </svg>
+    <span style="font-family: 'Outfit', sans-serif; font-weight: 700; letter-spacing: -0.5px;">Riverside</span>
             </a>
             
             <div class="expedition-auth-header">
@@ -59,6 +65,15 @@
 
                 <button type="submit" class="expedition-auth-btn">Access Dashboard</button>
             </form>
+
+            <div class="social-login" style="text-align: center; margin-top: 1.5rem;">
+                <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 1rem;">Or continue with</p>
+                <div style="display: flex; justify-content: center; gap: 1rem;">
+                    <button type="button" class="btn btn-outline-dark" style="flex: 1; padding: 0.5rem; background: var(--bg-color);"><i class="fa-brands fa-google" style="color: #ea4335;"></i></button>
+                    <button type="button" class="btn btn-outline-dark" style="flex: 1; padding: 0.5rem; background: var(--bg-color);"><i class="fa-brands fa-apple" style="color: var(--text-dark);"></i></button>
+                    <button type="button" class="btn btn-outline-dark" style="flex: 1; padding: 0.5rem; background: var(--bg-color);"><i class="fa-brands fa-facebook-f" style="color: #1877f2;"></i></button>
+                </div>
+            </div>
 
             <div class="expedition-auth-footer">
                 <p>Ready to start your journey? <a href="signup.html">Create an account</a></p>
